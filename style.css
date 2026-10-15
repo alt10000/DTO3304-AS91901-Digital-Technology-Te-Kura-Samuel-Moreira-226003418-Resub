@@ -1,0 +1,124 @@
+/* ---------- Page ---------- */
+body {
+    margin: 0;
+    overflow: hidden; /* stops the oversized rotated grid causing scrollbars */
+}
+
+.landing-main {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- Rotated flag grid ---------- */
+.flag-grid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150vmax;            /* oversized so rotation never exposes empty corners */
+    height: 105vmax;           /* 5 rows x 21vmax */
+    transform: translate(-50%, -50%) rotate(-35deg);
+
+    display: grid;
+    grid-template-columns: 1fr;   /* one column, rows only */
+    grid-auto-rows: 21vmax;       /* row height (bigger = fewer rows fit on screen) */
+    gap: 0;
+    z-index: 0;
+}
+
+.flag-row {
+    overflow: hidden;
+}
+
+.flag-track {
+    display: flex;
+    width: max-content;           /* track is as wide as all its flags */
+    height: 100%;
+    animation: scroll-left 40s linear infinite;
+}
+
+.flag-row.reverse .flag-track {
+    animation-direction: reverse; /* same animation, opposite direction */
+}
+
+.flag-track img {
+    flex: 0 0 auto;
+    height: 100%;
+    width: 31.5vmax;              /* 3:2 flags at the new row height */
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); } /* -50% = one full set, so it loops seamlessly */
+}
+
+/* Optional: vary speeds by row so they don't move in lockstep */
+.flag-row:nth-child(3n)   .flag-track { animation-duration: 55s; }
+.flag-row:nth-child(3n+1) .flag-track { animation-duration: 35s; }
+
+/* ---------- Foreground content ---------- */
+.landing-title,
+.landing-buttons {
+    position: relative;
+    z-index: 1;
+}
+
+.landing-title {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 12px 40px;
+    background: #000;
+    color: #fff;
+    font-family: "Bree Serif", serif;
+    font-size: 2rem;
+    border: 3px solid #fff;
+    border-radius: 24px;
+    outline: 2px solid #000;
+}
+
+.landing-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.enter-button,
+.info-button {
+    font-family: "Anton", sans-serif;
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+    border: 3px solid #000;
+    border-radius: 20px;
+    transition: transform 0.15s;
+}
+
+.enter-button {
+    font-size: 2rem;
+    padding: 14px 48px;
+}
+
+.info-button {
+    font-size: 1rem;
+    padding: 6px 18px;
+    border-radius: 14px;
+}
+
+.enter-button:hover,
+.info-button:hover {
+    transform: scale(1.08);
+}
+
+/* ---------- Accessibility ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .flag-track { animation: none; }
+}
