@@ -58,8 +58,7 @@ body {
 }
 
 /* Optional: vary speeds by row so they don't move in lockstep */
-.flag-row:nth-child(3n)   .flag-track { animation-duration: 55s; }
-.flag-row:nth-child(3n+1) .flag-track { animation-duration: 35s; }
+
 
 /* ---------- Foreground content ---------- */
 .landing-title,
@@ -121,4 +120,151 @@ body {
 /* ---------- Accessibility ---------- */
 @media (prefers-reduced-motion: reduce) {
     .flag-track { animation: none; }
+}
+
+/* ---------- Map page: header ---------- */
+.map-header {
+    position: relative;
+    height: 80px;
+    box-sizing: border-box;
+    border-bottom: 3px solid #000;
+    overflow: hidden;
+    background: #fff;
+}
+
+.header-row {
+    height: 100%;
+    overflow: hidden;
+}
+
+.header-track {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    animation: scroll-left 40s linear infinite; /* reuses the keyframes from the landing page */
+}
+
+.header-track img {
+    flex: 0 0 auto;
+    height: 100%;
+    width: 120px;              /* 3:2 ratio at the 80px header height */
+    object-fit: cover;
+    display: block;
+}
+
+.map-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 8px 40px;
+    background: rgba(0, 0, 0, 0.6);      /* lower the last number for more see-through */
+    color: #fff;
+    font-family: "Bree Serif", serif;
+    font-size: 2rem;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    border-radius: 24px;
+    white-space: nowrap;
+}
+
+/* ---------- Map page: map area ---------- */
+.map-area {
+    position: relative;
+    height: calc(100vh - 80px);  /* screen minus the header */
+    background: #fff;            /* placeholder until the map goes in */
+}
+
+/* ---------- Map page: sidebar ---------- */
+.sidebar {
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: #c5dcff;
+    border: 4px solid #000;
+    border-radius: 24px;
+    overflow: hidden;            /* clips the contents to the rounded corners */
+    z-index: 2;
+}
+
+.sidebar-search {
+    flex: 0 0 auto;              /* stays fixed at the top while the list scrolls */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    background: #0a84d6;
+    color: #fff;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+    font-size: 1rem;
+}
+
+.sidebar-search::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+.sidebar-search:focus {
+    background: #0970b5;
+}
+
+.country-list {
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 8px 6px 8px 10px;
+    list-style: none;
+    overflow-y: auto;            /* scroll wheel + scroll bar */
+    scrollbar-color: #7d8590 #e3e6ea;   /* Firefox */
+}
+
+/* Chrome / Edge / Safari scroll bar */
+.country-list::-webkit-scrollbar {
+    width: 10px;
+}
+.country-list::-webkit-scrollbar-track {
+    background: #e3e6ea;
+    border-radius: 6px;
+}
+.country-list::-webkit-scrollbar-thumb {
+    background: #7d8590;
+    border-radius: 6px;
+}
+
+.country {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+    color: #000;
+    text-decoration: none;
+    font-family: "Bree Serif", serif;
+    font-size: 1.05rem;
+}
+
+.country .flag {
+    flex: 0 0 auto;
+    width: 62px;
+    height: 36px;
+    border: 3px solid #000;
+    border-radius: 20px;
+    background-color: #fff;      /* shows if a flag image is missing */
+    background-size: cover;
+    background-position: center;
+}
+
+/* hover colour: match this to the country's highlight colour on the map later */
+.country:hover .name {
+    color: #2a6ebb;
+}
+
+/* ---------- Accessibility ---------- */
+@media (prefers-reduced-motion: reduce) {
+    .header-track { animation: none; }
 }
