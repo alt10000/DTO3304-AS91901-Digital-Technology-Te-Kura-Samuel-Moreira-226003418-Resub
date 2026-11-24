@@ -491,3 +491,75 @@ body.country-page {
 @media (prefers-reduced-motion: reduce) {
     .side-track { animation: none; }
 }
+
+/* ---------- Country pages: historical flag entries ---------- */
+.country-info h3 {
+    margin: 0 0 6px;
+    font-family: "Bree Serif", serif;
+    font-size: 1.25rem;
+}
+
+.country-info h4 {
+    margin: 0 0 6px;
+    font-family: "Bree Serif", serif;
+    font-size: 1.15rem;
+}
+
+.flag-section-title {
+    margin: 36px 0 18px !important;
+    padding-bottom: 6px;
+    font-size: 1.5rem !important;
+    border-bottom: 4px solid #000;
+}
+
+.flag-intro {
+    font-style: italic;
+}
+
+.flag-entry {
+    margin: 0 0 30px;
+}
+
+.flag-entry-image {
+    margin-bottom: 12px;
+    border: 6px solid #000;
+    border-radius: 24px;
+    overflow: hidden;            /* rounds the image corners */
+    background: #f0f0f0;
+}
+
+.flag-entry-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 140px;           /* keeps the box visible while an image is missing */
+    max-height: 320px;
+    object-fit: contain;         /* flags of any shape fit without cropping */
+    background: #f0f0f0;
+}
+
+.flag-notes {
+    margin: 10px 0 30px;
+    padding: 16px 20px 6px;
+    background: #fdf3e7;
+    border-left: 6px solid #000;
+    border-radius: 10px;
+}
+
+.flag-notes-title {
+    margin-top: 6px;
+}
+
+.flag-notes p {
+    font-size: 1rem;
+}
+
+.flag-notes-list {
+    margin: 0 0 18px;
+    padding-left: 22px;
+    line-height: 1.5;
+}
+
+.flag-notes-list li {
+    margin-bottom: 6px;
+}
