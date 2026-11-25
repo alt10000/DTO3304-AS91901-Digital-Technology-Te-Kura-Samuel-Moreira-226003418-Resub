@@ -565,3 +565,170 @@ body.country-page {
 .flag-notes-list li {
     margin-bottom: 6px;
 }
+
+/* ---------- Information page ---------- */
+body.guide-page {
+    overflow: auto;              /* overrides the landing page's overflow: hidden */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #fdf3e7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+}
+
+/* links back to the other pages, sitting on the left of the moving flag header */
+.guide-nav {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+}
+
+.guide-nav a {
+    padding: 6px 16px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-decoration: none;
+    font-family: "Bree Serif", serif;
+    font-size: 1rem;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    border-radius: 14px;
+    transition: transform 0.15s;
+}
+
+.guide-nav a:hover {
+    transform: scale(1.08);
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.guide-content {
+    flex: 1 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px 50px;
+}
+
+.guide-card {
+    margin-bottom: 30px;
+    padding: 24px 28px 28px;
+    background: #fff;
+    border: 6px solid #000;
+    border-radius: 10px;
+}
+
+.guide-card h2 {
+    margin: 0 0 12px;
+    padding-bottom: 6px;
+    font-family: "Bree Serif", serif;
+    font-size: 1.8rem;
+    border-bottom: 4px solid #000;
+}
+
+.guide-card > p {
+    margin: 0 0 16px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.guide-steps {
+    margin: 0;
+    padding-left: 22px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.guide-steps li {
+    margin-bottom: 8px;
+}
+
+/* sources: each link sits under its label */
+.sources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.source-item {
+    padding: 12px 16px;
+    background: #c5dcff;
+    border: 3px solid #000;
+    border-radius: 16px;
+    min-width: 0;
+}
+
+.source-label {
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Bree Serif", serif;
+    font-size: 1.05rem;
+}
+
+.source-item a {
+    color: #1a4f9c;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;     /* long URLs wrap instead of overflowing the box */
+}
+
+.source-item a:hover {
+    color: #2a6ebb;
+}
+
+/* footer */
+.guide-footer {
+    flex: 0 0 auto;
+    padding: 22px 20px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    border-top: 4px solid #c5dcff;
+    font-family: "Bree Serif", serif;
+}
+
+.guide-footer p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.guide-footer a {
+    color: #7fb8ff;
+}
+
+.guide-footer a:hover {
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .guide-nav {
+        top: 6px;
+        left: 8px;
+        gap: 4px;
+        transform: none;
+    }
+    .guide-nav a {
+        padding: 4px 10px;
+        font-size: 0.85rem;
+    }
+    .guide-page .map-title {
+        padding: 6px 18px;
+        font-size: 1.3rem;
+        top: auto;
+        bottom: 6px;
+        transform: translate(-50%, 0);
+    }
+    .guide-card {
+        padding: 18px 16px 20px;
+    }
+    .sources-grid {
+        grid-template-columns: 1fr;
+    }
+}
