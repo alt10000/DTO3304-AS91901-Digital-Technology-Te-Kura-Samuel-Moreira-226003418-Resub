@@ -60,7 +60,15 @@
             <section class="country-info">
                 <h2>Historical Flags</h2>
                 <p class="flag-intro">Polish flag history developed from royal and dynastic banners into the white-and-red national flag. The distinction is important: medieval and early-modern Polish rulers generally used heraldic standards bearing the White Eagle or the combined arms of the Polish-Lithuanian Commonwealth, rather than a single national flag in the modern sense.</p>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1300-1599">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/poland1.webp" alt="Banner of the Kingdom of Poland (14th–16th centuries)">
                     </div>
@@ -68,7 +76,7 @@
                     <p>The royal banner traditionally consisted of a red field bearing the crowned White Eagle of Poland. It represented the authority of the Polish monarch and the Kingdom itself, and was carried at important ceremonies and military occasions. The White Eagle had become firmly established as the kingdom’s principal emblem by the reign of Władysław I Łokietek (1320–1333).</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1587-1668">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/poland2.webp" alt="Banner of the Vasa kings (1587–1668)">
                     </div>
@@ -76,7 +84,7 @@
                     <p>During the Vasa dynasty, royal standards incorporated the arms of the Polish Crown and the Grand Duchy of Lithuania, alongside Swedish heraldic symbols reflecting the dynasty’s Swedish connections. A surviving standard of Władysław IV, made in 1636, used alternating red and white silk sections and displayed a crowned shield combining the Polish Eagle, Lithuanian Pogoń, Swedish Three Crowns and Folkung Lion, and the Vasa sheaf. These were elaborate royal and ceremonial standards, rather than ordinary national flags.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1697-1763">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/poland3.webp" alt="Banner of the Wettin kings (1697–1763)">
                     </div>
@@ -84,7 +92,7 @@
                     <p>Under Augustus II and Augustus III, royal banners continued to represent the Polish-Lithuanian Commonwealth through its heraldic arms, while incorporating the Wettin dynasty's Saxon symbols. Reconstructions commonly show the crowned Polish-Lithuanian arms combined with Saxon heraldry on a richly decorated royal standard. The exact appearance of the banner should be treated cautiously, as surviving evidence for a single standard design is limited.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1815-1830">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/poland4.webp" alt="Flag of the Russian Tsar as King of the Congress Kingdom (1815–1830)">
                     </div>
@@ -92,7 +100,7 @@
                     <p>This was a distinctive banner associated with the Russian monarch in his capacity as King of Poland. It is generally depicted with a white field bearing a blue diagonal St Andrew's cross, and a red canton containing a crowned Polish White Eagle. It expressed the personal union between the Kingdom of Poland and the Russian Empire, as well as the kingdom's subordinate position. It was a royal banner rather than a general national flag.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1830-1831">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/poland5.webp" alt="Banner of the Kingdom of Poland (November Uprising, 1830–1831)">
                     </div>
@@ -100,7 +108,7 @@
                     <p>During the November Uprising against Russian rule, Polish forces and supporters used various banners, including white-and-red designs and standards bearing the White Eagle. On 7 February 1831, the insurgent Sejm formally established white and red as the national colours, drawing them from the heraldic colours of Poland and Lithuania. The resolution specifically regulated the national cockade, rather than prescribing one uniform flag design.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1863-1864">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/poland6.webp" alt="The vision of the flag of the Polish National Government (January Uprising, 1863–1864)">
                     </div>
@@ -108,7 +116,7 @@
                     <p>This design represents the idea of restoring a Polish-Lithuanian-Ruthenian political union. Its central emblem combines the Polish White Eagle, the Lithuanian Pogoń (a mounted knight), and the Ruthenian Archangel Michael. These three figures are historically confirmed as the uprising's distinctive coat of arms, used by its National Government from 1863. However, the familiar flag illustrations incorporating this emblem are modern interpretations: there was no single universally established flag design for the uprising.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1918-1919">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/poland7.webp" alt="Banner of the Greater Poland Uprising (1918–1919)">
                     </div>
@@ -116,7 +124,7 @@
                     <p>Insurgents used a variety of Polish patriotic banners, particularly red standards bearing the White Eagle and simple white-over-red flags. Some eagle banners were decorated with inscriptions, fringes or other ceremonial details. One particularly well-known example, now preserved in the Museum of the Greater Poland Uprising, features a white eagle on a red field and became an enduring commemorative symbol of the revolt.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1919-1939">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/poland8.webp" alt="Flag of the Second Polish Republic (1919–1939)">
                     </div>
@@ -124,7 +132,7 @@
                     <p>Following the restoration of Polish independence, the Legislative Sejm formally adopted the white-over-red horizontal bicolour on 1 August 1919. The flag's colours derived from the White Eagle and the red field of the Polish coat of arms. A version bearing the national coat of arms in the centre of the white stripe was also established for certain official uses, including diplomatic representation and maritime service. The national colours remained unchanged, although the official design of the White Eagle was revised in 1927.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1944-1989">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/poland9.webp" alt="Flag of the Polish People&#x27;s Republic (1944–1989)">
                     </div>
@@ -132,7 +140,7 @@
                     <p>The white-over-red bicolour continued to be used under communist rule, retaining the same basic design as the flag of the Second Republic. However, the White Eagle in the national coat of arms lost its crown, a change formalised in the 1955 decree. The flag bearing the uncrowned eagle was used for certain official purposes, while the plain white-and-red bicolour remained the country's principal national flag.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1990-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/poland10.webp" alt="Flag of the Republic of Poland (1990–present)">
                     </div>
@@ -185,6 +193,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

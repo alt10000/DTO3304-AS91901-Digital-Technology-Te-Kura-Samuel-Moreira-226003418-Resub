@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1526-1527">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/croatia1.webp" alt="Flag of Croatian Troops (1526–1527)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>A military banner associated with Croatian forces around the Battle of Mohács. It is commonly illustrated with a red-and-white checkerboard pattern, though the precise design and historical attribution are not certain.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1947-1990">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/croatia2.webp" alt="Flag of the Socialist Republic of Croatia (1947–1990)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>Adopted on 18 January 1947, this flag featured three horizontal stripes of red, white and blue, with a red five-pointed star outlined in gold at the centre. It represented Croatia as one of the constituent republics of socialist Yugoslavia, with the star symbolising communism and the Partisan movement's victory during the Second World War.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1990-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/croatia3.webp" alt="Flag of Croatia (1990–present)">
                     </div>
@@ -120,6 +128,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1354-1354">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bosnia1.png" alt="Flag of the Bosnian Banate (c. 1354)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>Associated with the medieval Banate of Bosnia under Ban Stephen II Kotromanić, this banner featured a blue field with a white cross pattée in the centre and a swallow-tailed design. It is among the earliest recorded heraldic symbols associated with the medieval Bosnian state.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1377-1391">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bosnia2.webp" alt="Royal Flag of Tvrtko I of Bosnia (1377–1391)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>Used during the reign of King Tvrtko I, this royal banner featured a white field bearing the coat of arms of the Kotromanić dynasty, consisting of a blue shield with a white diagonal stripe and six golden fleurs-de-lis. The design represented the establishment of the Kingdom of Bosnia and became an important symbol of medieval Bosnian royalty.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1448-1482">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bosnia3.png" alt="Flag of Herzegovina (1448–1482)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>Associated with the Duchy of Saint Sava under Duke Stjepan Vukčić Kosača, this flag featured a red field with two white cross pattées positioned towards the hoist and a three-pointed fringe at the fly. It represented the medieval Duchy of Saint Sava, from which the historical name Herzegovina derives.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1618-1618">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bosnia4.webp" alt="Banner used for Rama at Ferdinand II&#x27;s Coronation (1618)">
                     </div>
@@ -91,7 +99,7 @@
                     <p>This swallow-tailed banner represented the historical region of Rama during the coronation of Ferdinand II as King of Hungary. It featured a blue field with a central heraldic shield, reflecting the region's historical identity and its association with the medieval Bosnian crown.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1831-1832">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bosnia5.webp" alt="Flag of the Bosnian Uprising (1831–1832)">
                     </div>
@@ -99,7 +107,7 @@
                     <p>Used during the rebellion led by Husein-kapetan Gradaščević against Ottoman authority, this flag featured a green field with a yellow crescent and star. It became a symbol of the Bosnian movement for greater autonomy within the Ottoman Empire, although the precise date of its adoption is uncertain.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1878-1908">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bosnia6.webp" alt="Flag of the Austro-Hungarian-Occupied Province of Bosnia (1878–1908)">
                     </div>
@@ -107,7 +115,7 @@
                     <p>Introduced following the Austro-Hungarian occupation of Bosnia in 1878, this flag featured two horizontal stripes of red and yellow, with a central coat of arms depicting an arm emerging from a cloud holding a sword. The coat of arms was inspired by the heraldry of medieval Bosnian nobleman Stjepan Vukčić Kosača and was intended to establish a distinct provincial identity under Habsburg administration.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1908-1918">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bosnia7.webp" alt="Flag of the Condominium of Bosnia and Herzegovina (1908–1918)">
                     </div>
@@ -115,7 +123,7 @@
                     <p>Following the formal annexation of Bosnia and Herzegovina by Austria-Hungary in 1908, the provincial flag was simplified to a horizontal red-and-yellow bicolour without the central coat of arms. The design remained in use until the collapse of Austria-Hungary at the end of the First World War in 1918.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1940-1946">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bosnia8.webp" alt="Flag of the Bosnian-Herzegovinian Partisans (1940–1946)">
                     </div>
@@ -123,7 +131,7 @@
                     <p>Used by the Bosnian-Herzegovinian Partisans during the Second World War, this flag featured a red field with a central red five-pointed star outlined in yellow. The design represented the communist-led resistance movement against Axis occupation and its collaborators, as well as the wider Yugoslav Partisan struggle for liberation.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1946-1992">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bosnia9.webp" alt="Flag of the Socialist Republic of Bosnia and Herzegovina (1946–1992)">
                     </div>
@@ -131,7 +139,7 @@
                     <p>Adopted on 31 December 1946, this flag featured a red field with the Yugoslav national flag in the upper-left corner. The red background represented the socialist and national liberation movements, while the Yugoslav tricolour symbolised Bosnia and Herzegovina's position as one of the constituent republics of socialist Yugoslavia.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1992-1998">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bosnia10.webp" alt="Flag of the Republic of Bosnia and Herzegovina (1992–1998)">
                     </div>
@@ -139,7 +147,7 @@
                     <p>Adopted following Bosnia and Herzegovina's declaration of independence in 1992, this flag featured a white field with a blue shield in the centre, bearing a white diagonal stripe and six golden fleurs-de-lis. The design was based on the medieval coat of arms of the Kotromanić dynasty and symbolised the country's historical heritage and newly restored independence.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1998-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bosnia11.webp" alt="Modern Flag of Bosnia and Herzegovina (1998–present)">
                     </div>
@@ -184,6 +192,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

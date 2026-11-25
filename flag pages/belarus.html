@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1918-1919">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/belarus1.webp" alt="White-Red-White Flag of the Belarusian Democratic Republic (1918–1919; in exile thereafter)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>Adopted in 1918 following the establishment of the Belarusian Democratic Republic, this flag featured three horizontal stripes of white, red and white. Designed by Klaudzi Duzh-Dusheuski, it became an important symbol of Belarusian national identity and independence, later being revived following the collapse of the Soviet Union.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1919-1925">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/belarus2.webp" alt="Flag of the Belarusian Democratic Republic in Exile (1919–1925)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>Used by the Belarusian government-in-exile, this variation retained the white-red-white design but added thin black stripes bordering the central red stripe. The black stripes are traditionally interpreted as symbols of mourning following the loss of Belarusian independence.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1919-1920">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/belarus3.webp" alt="Flag of the Socialist Soviet Republic of Lithuania and Belorussia (1919–1920)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>Also known as the Litbel flag, this design consisted of a simple red field without any additional symbols or inscriptions. It represented the short-lived socialist republic formed through the union of Soviet Lithuania and Soviet Belarus in February 1919.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1919-1927">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/belarus4.webp" alt="Flag of the Socialist Soviet Republic of Byelorussia (1919–1927)">
                     </div>
@@ -91,7 +99,7 @@
                     <p>Following the establishment of Soviet Byelorussia, a red flag featuring the golden Cyrillic initials ССРБ (SSRB) in the upper-left corner was introduced. The design represented the new socialist republic and remained in use, with minor constitutional changes, until 1927.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1927-1937">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/belarus5.webp" alt="Flag of the Byelorussian Soviet Socialist Republic (1927–1937)">
                     </div>
@@ -99,7 +107,7 @@
                     <p>This flag retained the traditional red background but replaced the previous abbreviation with the golden Cyrillic initials БССР (BSSR), reflecting the republic's updated official name. It represented Soviet Belarus until 1937, when communist symbols were added to the design.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1942-1944">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/belarus6.webp" alt="Flag of the Belarusian Central Council (1942–1944)">
                     </div>
@@ -107,7 +115,7 @@
                     <p>Used by the Belarusian Central Council, a German-sponsored administrative body established during the Nazi occupation of Belarus, this flag incorporated the traditional white-red-white national colours. The council also used the historic Pahonia coat of arms, associating its symbols with Belarusian national identity.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1943-1945">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/belarus7.webp" alt="Flag of the Union of Belarusian Youth (1943–1945)">
                     </div>
@@ -115,7 +123,7 @@
                     <p>Associated with the Union of Belarusian Youth, a Nazi-sponsored organisation established during the German occupation, this flag incorporated Belarusian national colours and the organisation's distinctive emblem. Its symbolism reflected the nationalist imagery promoted by Belarusian collaborationist organisations during the Second World War.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1944-1951">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/belarus8.jpg" alt="Flag of the Byelorussian Soviet Socialist Republic (1944–1951)">
                     </div>
@@ -123,7 +131,7 @@
                     <p>Following the restoration of Soviet authority in Belarus, the republic returned to a red flag featuring the golden Cyrillic initials БССР in the upper-left corner, surrounded by a golden border. This version omitted the hammer, sickle and star found on the earlier Soviet design and remained in use until the introduction of a new flag in 1951.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1991-1995">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/belarus9.webp" alt="Civil and State Flag of Belarus (1991–1995)">
                     </div>
@@ -131,7 +139,7 @@
                     <p>Following the dissolution of the Soviet Union and Belarusian independence in 1991, the white-red-white tricolour was restored as the national flag. It represented the country's break from Soviet rule and its renewed connection with the Belarusian Democratic Republic of 1918, serving as both the civil and state flag.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1995-2012">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/belarus10.webp" alt="National Flag and Ensign of Belarus (1995–2012)">
                     </div>
@@ -139,7 +147,7 @@
                     <p>Following a controversial referendum in May 1995, Belarus reintroduced a flag inspired by the design of the former Soviet republic. It featured two horizontal stripes of red and green, with a white vertical stripe at the hoist containing a red traditional Belarusian ornamental pattern. The Soviet hammer, sickle and star were removed, retaining the design's national rather than explicitly communist symbolism.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="2012-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/belarus11.webp" alt="Modern National Flag and Ensign of Belarus (2012–present)">
                     </div>
@@ -184,6 +192,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

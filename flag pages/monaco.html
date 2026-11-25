@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1814-1881">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/monaco1.webp" alt="Flag of Monaco (1814–1881)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>Following the end of French rule in 1814, the Principality of Monaco restored its traditional princely banner. It featured a white field bearing the coat of arms of the House of Grimaldi, which included a shield decorated with red and white lozenges (diamond shapes). This design represented the ruling dynasty and the restored sovereignty of the principality.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1881-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/monaco2.webp" alt="National flag of Monaco (1881–present)">
                     </div>
@@ -113,6 +121,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

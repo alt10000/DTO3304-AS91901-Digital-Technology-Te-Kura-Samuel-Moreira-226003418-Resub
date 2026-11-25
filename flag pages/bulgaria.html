@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1325-1325">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bulgaria1.webp" alt="Flag of the Second Bulgarian Empire according to Angelino Dalorto (c. 1325)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>Depicted on a medieval portolan chart by Italian cartographer Angelino Dalorto, this flag is associated with the Shishman dynasty, which ruled parts of the Second Bulgarian Empire. The historical illustration depicts a light-coloured banner bearing a red heraldic symbol, although its precise design and colours are difficult to establish from the surviving map.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1380-1380">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bulgaria2.webp" alt="Flag of the Second Bulgarian Empire according to Guillem Soler (c. 1380)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>Appearing on a nautical chart produced by Majorcan cartographer Guillem Soler, this flag represents Bulgaria during the later period of the Second Bulgarian Empire. Its depiction differs from earlier Bulgarian heraldic representations, illustrating the variety of symbols used to identify medieval Bulgarian territories and rulers.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1300-1399">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bulgaria3.webp" alt="Flag of the Tsardom of Vidin (14th century)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>Associated with the Tsardom of Vidin, a medieval Bulgarian state that emerged following the fragmentation of the Second Bulgarian Empire, this flag featured heraldic imagery associated with its ruling dynasty. It represented the western Bulgarian territories ruled by Ivan Sratsimir before their conquest by the Ottoman Empire in 1396.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1947-1948">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bulgaria4.webp" alt="Civil and State Flag of the People&#x27;s Republic of Bulgaria (1947–1948)">
                     </div>
@@ -91,7 +99,7 @@
                     <p>Following the abolition of the Bulgarian monarchy in 1946 and the establishment of the People's Republic, a new flag was introduced in 1947. It retained the traditional white, green and red horizontal stripes but added a national emblem in the upper-left corner of the white stripe, featuring a golden lion surrounded by wheat ears beneath a red star and a ribbon bearing the date 9 September 1944.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1948-1968">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bulgaria5.webp" alt="Civil and State Flag of the People&#x27;s Republic of Bulgaria (1948–1968)">
                     </div>
@@ -99,7 +107,7 @@
                     <p>In 1948, the Bulgarian national emblem was revised while the flag's white, green and red stripes remained unchanged. The emblem continued to feature a golden lion, wheat wreath and red star, with the date 9 September 1944 retained to commemorate the communist takeover of Bulgaria.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1968-1971">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bulgaria6.webp" alt="Civil and State Flag of the People&#x27;s Republic of Bulgaria (1968–1971)">
                     </div>
@@ -107,7 +115,7 @@
                     <p>This version retained the established communist-era tricolour but introduced another modification to the national emblem, refining its heraldic details and overall appearance. The red star, golden lion, wheat wreath and commemorative date remained central elements of the design.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1971-1990">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bulgaria7.webp" alt="Civil and State Flag of the People&#x27;s Republic of Bulgaria (1971–1990)">
                     </div>
@@ -115,7 +123,7 @@
                     <p>Introduced in 1971, this flag featured a revised national emblem with the dates 681 and 1944 displayed on separate sections of its ribbon. The year 681 commemorated the foundation of the First Bulgarian Empire, while 1944 represented the communist takeover, combining Bulgaria's medieval history with its socialist political identity.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1990-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/bulgaria8.webp" alt="Modern Flag of Bulgaria (1990–present)">
                     </div>
@@ -161,6 +169,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

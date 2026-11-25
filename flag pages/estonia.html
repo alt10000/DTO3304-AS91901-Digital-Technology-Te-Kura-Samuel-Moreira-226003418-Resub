@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1940-1953">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/estonia1.webp" alt="Flag of the Estonian Soviet Socialist Republic (1940–1953)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>Adopted on 31 October 1940 following the Soviet occupation and annexation of Estonia. It consisted of a red field with a golden hammer and sickle in the upper-left corner, with the gold abbreviation ENSV (Eesti Nõukogude Sotsialistlik Vabariik) above them.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1953-1990">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/estonia2.webp" alt="Flag of the Estonian Soviet Socialist Republic (1953–1990)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>Adopted on 6 February 1953, this redesigned flag featured a red field with a golden hammer and sickle and a red star outlined in gold. Near the bottom were blue and white wavy stripes, representing the Baltic Sea; the design was created by Estonian artist Paul Luhtein.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1990-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/estonia3.webp" alt="Flag of Estonia (1990–present)">
                     </div>
@@ -120,6 +128,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

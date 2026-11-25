@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1806-1866">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/andorra1.webp" alt="Flag of Andorra (1806–1866)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>This flag is traditionally described as a vertical yellow-and-red bicolour, believed to have been inspired by the colours of the House of Foix. However, its historical existence is disputed, as no definitive contemporary documentary evidence has been found to confirm its use.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1866-1939">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/andorra2.webp" alt="Flag of Andorra (1866–1939)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>Introduced during the New Reform of 1866, this flag featured three vertical stripes of blue, yellow and red, traditionally attributed to Napoleon III. The colours represented Andorra's historical connections with France and Spain, and the design established the basis of the modern Andorran flag.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1939-1949">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/andorra3.webp" alt="Flag of Andorra (1939–1949)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>Around 1939, Andorra returned to the vertical blue, yellow and red tricolour, introducing a coat of arms in the centre of the yellow stripe. This early version featured a crowned coat of arms without the traditional Latin motto, Virtus Unita Fortior.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1949-1959">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/andorra4.webp" alt="Flag of Andorra (1949–1959)">
                     </div>
@@ -91,7 +99,7 @@
                     <p>This version retained the vertical blue, yellow and red stripes but featured a revised coat of arms in the centre. The changes reflected the continued evolution of Andorra's national heraldry, although the flag's design had not yet been formally standardised.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1959-1971">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/andorra5.webp" alt="Flag of Andorra (1959–1971)">
                     </div>
@@ -99,7 +107,7 @@
                     <p>The 1959 version continued the established tricolour design, featuring another variation of the Andorran coat of arms. It represented a further development towards the modern flag, although variations in the proportions, colours and heraldic details continued to exist.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1971-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/andorra6.webp" alt="Modern Flag of Andorra (1971–present)">
                     </div>
@@ -144,6 +152,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

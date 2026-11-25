@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1821-1827">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/cyprus1.webp" alt="Flag of the Greek War of Independence (1821–1827)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>Used by the Cypriot volunteers who fought alongside Greek forces during the Greek War of Independence. It was a white banner bearing a large blue cross, with the Greek inscription «ΕΛΛΗΝΙΚΗ ΣΗΜΑΙΑ – ΠΑΤΡΙΣ ΚΥΠΡΟΣ» (“Greek Flag – Homeland Cyprus”) in the upper-left corner.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1960-1960">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/cyprus2.webp" alt="First Flag of Cyprus (1960)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>An early version of the flag designed for the newly independent Republic of Cyprus. It featured an unfilled outline of the island above two olive branches on a white background.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1960-2006">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/cyprus3.webp" alt="Second Flag of Cyprus (1960–2006)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>The original national flag adopted upon independence on 16 August 1960, designed by Turkish Cypriot artist İsmet Güney. It depicted the island in copper-orange above two green olive branches, symbolising the island's copper resources and the hope for peace between the Greek and Turkish Cypriot communities.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="2006-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/cyprus4.webp" alt="National Flag of Cyprus (2006–present)">
                     </div>
@@ -128,6 +136,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

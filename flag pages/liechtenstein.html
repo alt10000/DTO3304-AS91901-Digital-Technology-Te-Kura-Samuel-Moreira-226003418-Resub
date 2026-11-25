@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1719-1852">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/liechtenstein1.webp" alt="Principality of Liechtenstein (1719–1852)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>When the Principality of Liechtenstein was established in 1719, its flag was a horizontal bicolour of gold (yellow) over red. These colours were derived from the heraldic colours of the Princely House of Liechtenstein.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1852-1921">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/liechtenstein2.webp" alt="Principality of Liechtenstein (1852–1921)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>The gold-and-red design was replaced by the national colours blue and red. The flag is commonly depicted with two vertical stripes, blue at the hoist and red at the fly, although historical sources indicate that the orientation was not always consistent. The colours had been associated with the princely household before their adoption for the flag.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1921-1937">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/liechtenstein3.webp" alt="Principality of Liechtenstein (1921–1937)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>The Constitution of 5 October 1921 formally established a horizontal bicolour of blue over red. This was the first clearly prescribed version of the modern blue-and-red national flag, and it had no emblem.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1937-1982">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/liechtenstein4.webp" alt="Principality of Liechtenstein (1937–1982)">
                     </div>
@@ -91,7 +99,7 @@
                     <p>A golden princely hat was added in the upper-left portion of the blue stripe on 24 June 1937. The change followed the discovery at the 1936 Berlin Olympic Games that Liechtenstein's plain blue-and-red flag was almost identical to the flag of Haiti. The hat distinguished the two designs and highlighted the country's monarchy.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1982-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/liechtenstein5.webp" alt="National flag and ensign of Liechtenstein (1982–present)">
                     </div>
@@ -137,6 +145,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

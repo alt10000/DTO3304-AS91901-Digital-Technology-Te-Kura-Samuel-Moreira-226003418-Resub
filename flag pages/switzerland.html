@@ -60,7 +60,15 @@
             <section class="country-info">
                 <h2>Historical Flags</h2>
                 <p class="flag-intro">The history of the Swiss flag begins with military identification symbols used by the cantons of the Old Swiss Confederacy. The white cross on red gradually became a shared emblem, eventually developing into the distinctive square national flag adopted with the establishment of the modern Swiss federal state in 1848.</p>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1422-1475">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/switzerland1.png" alt="First flag of the Old Swiss Confederacy (c.1422–1475)">
                     </div>
@@ -68,7 +76,7 @@
                     <p>Commonly depicted as a red triangular banner with an elongated white cross positioned slightly toward the hoist. It is associated with the Confederate troops at the Battle of Arbedo in 1422, although the precise design and its use as a unified Confederate flag are not entirely certain. The white cross had already appeared as a military identifying symbol at the Battle of Laupen in 1339.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1475-1798">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/switzerland2.webp" alt="Second flag of the Old Swiss Confederacy (c.1475–1798)">
                     </div>
@@ -76,7 +84,7 @@
                     <p>A square red banner bearing a white cross in its centre. The cross became an increasingly recognisable emblem of the Swiss Confederates and appeared on soldiers' clothing, equipment and military banners. It was a shared symbol of the Confederacy rather than a national flag in the modern sense.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1814-1848">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/switzerland3.png" alt="Flag of the Restored Swiss Confederacy (1814–1848)">
                     </div>
@@ -84,7 +92,7 @@
                     <p>A red square flag with a white cross, featuring a sword surrounded by laurel branches in the centre and the German inscription Für Vaterland und Ehre ("For Fatherland and Honour") across the horizontal arm. Associated with the restoration of the Confederacy after the Napoleonic period, it reflected the revival of the traditional Swiss cross as a common military and national emblem. The restored Confederacy officially reintroduced the Swiss Cross as its national emblem in 1814.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1848-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/switzerland4.webp" alt="National flag of Switzerland (1848–present)">
                     </div>
@@ -138,6 +146,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

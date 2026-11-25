@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1848-1918">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/slovenia1.webp" alt="Flag of the Duchy of Carniola (1848–1918)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>The flag consisted of three horizontal stripes of white, blue and red. These colours originated from the heraldic colours of Carniola, which were officially recognised by the Austrian authorities in 1848. Although initially representing the duchy, the tricolour quickly became a symbol of Slovenian national identity and was adopted by Slovenians throughout the wider region. It was first raised in Ljubljana on 7 April 1848 by Slovenian patriot Lovro Toman and his fellow students.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1918-1941">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/slovenia2.webp" alt="Flag of the Kingdom of Yugoslavia (1918–1941)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>Following the creation of the Kingdom of Serbs, Croats and Slovenes in 1918, the Slovenian lands became part of a larger South Slavic state. The kingdom's flag consisted of three horizontal stripes of blue, white and red, representing the South Slavic peoples and the Pan-Slavic movement. After the country was renamed the Kingdom of Yugoslavia in 1929, the same flag remained in use. The Slovenian white-blue-red tricolour continued to represent Slovenian national identity informally, although it was not the kingdom's official state flag.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1941-1945">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/slovenia3.webp" alt="Flag of the Slovene Partisans (1941–1945)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>During the Second World War, the Slovene Partisans used the traditional white-blue-red tricolour with a red five-pointed star, usually placed in the centre. The star represented the communist-led resistance movement and its struggle against the Axis occupation. Some partisan flags also incorporated the emblem of the Liberation Front of the Slovene Nation (Osvobodilna fronta), which featured a stylised mountain motif and the initials OF. The flag became an important symbol of the Slovenian national liberation movement.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1943-1945">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/slovenia4.webp" alt="Flag of the Slovene Home Guard (1943–1945)">
                     </div>
@@ -91,7 +99,7 @@
                     <p>The Slovene Home Guard (Slovensko domobranstvo) was an anti-communist military formation established in German-occupied Slovenia and supported by Nazi Germany. Its members also used the traditional Slovenian white-blue-red colours, often incorporating the historical coat of arms of Carniola, which featured a blue eagle on a silver shield. Various military and ceremonial standards existed, rather than one universally standardised flag. Unlike the Partisan flag, Home Guard banners did not use the red communist star as their central emblem.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1947-1991">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/slovenia5.webp" alt="Flag of the Socialist Republic of Slovenia (1947–1991)">
                     </div>
@@ -99,7 +107,7 @@
                     <p>After the establishment of socialist Yugoslavia, Slovenia retained its traditional white-blue-red tricolour but added a large red five-pointed star, usually outlined in gold, in the centre. The design was officially adopted on 18 January 1947. It remained the flag of the People's Republic of Slovenia until 1963, when the republic was renamed the Socialist Republic of Slovenia. The flag continued in use until the transition to the independent republic's new symbols in 1991.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1991-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/slovenia6.webp" alt="Flag of Slovenia (1991–present)">
                     </div>
@@ -154,6 +162,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

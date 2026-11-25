@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1016-1035">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/denmark1.webp" alt="Flag of the North Sea Empire (1016–1035)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>The North Sea Empire, ruled by Cnut the Great, is traditionally associated with the Raven Banner, a black raven emblem on a coloured field. This banner was used by several Viking rulers and Scandinavian forces, although its exact design and colours during Cnut's reign are not conclusively established.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1397-1523">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/denmark2.webp" alt="Flag of the Kalmar Union (1397–1523)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>The Kalmar Union, which united Denmark, Norway and Sweden under a common monarch, is associated with a red Scandinavian cross on a yellow field. This design is based on two letters from King Eric of Pomerania in 1430 referring to a "banner of the realms"; no surviving original flag or contemporary illustration confirms its appearance, so modern depictions are reconstructions.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1748-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/denmark3.webp" alt="Civil Flag and Ensign of Denmark (1748–present)">
                     </div>
@@ -120,6 +128,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

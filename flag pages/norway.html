@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1200-1399">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/norway1.webp" alt="Likely royal banner of Norway (13th–14th centuries)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>This medieval banner is generally reconstructed as a red field bearing a golden lion rampant holding a silver axe. The lion derives from the Norwegian royal coat of arms and became the principal symbol of the Norwegian monarchy. One of the earliest known depictions of this banner appears on the seal of Duchess Ingebjørg Håkonsdatter from 1318. It is regarded as the predecessor of Norway's modern royal standard.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1500-1814">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/norway2.webp" alt="Dannebrogen (c. 16th century–1814)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>During the union with Denmark, Norway used the Danish Dannebrog: a red field with a white Scandinavian cross extending to the edges. It became increasingly common on Norwegian ships, fortresses and military establishments, and from 1748 was the only officially recognised merchant flag of the Danish-Norwegian state. The flag's legendary origin dates to the Battle of Lyndanisse in 1219, when it supposedly fell from heaven, although this story is not supported by contemporary evidence.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1537-1814">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/norway3.webp" alt="Flag of Denmark–Norway (1537–1814)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>The composite Danish-Norwegian monarchy generally used the same red flag with a white Nordic cross. Merchant vessels flew the rectangular Dannebrog, while naval and royal vessels commonly used a swallow-tailed version. The flag represented the shared monarchy rather than Norway alone, as the two kingdoms were governed by the same monarch and increasingly integrated politically.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1814-1821">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/norway4.webp" alt="Flag of Norway (1814–1821)">
                     </div>
@@ -91,7 +99,7 @@
                     <p>Following the dissolution of the union with Denmark, Regent Christian Frederik proclaimed a Norwegian flag on 27 February 1814. It retained the red field and white cross of the Dannebrog but added the Norwegian golden lion with its silver axe in the upper-left canton. The design served as Norway's state and naval flag during its brief period of independence and continued as a merchant flag until 1821.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1815-1844">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/norway5.webp" alt="State flag of Norway and Sweden (1815–1844)">
                     </div>
@@ -99,7 +107,7 @@
                     <p>Following the establishment of the union between Norway and Sweden, a common naval and state flag was introduced on 7 March 1815. It was based on the Swedish swallow-tailed flag, with a red canton containing a white diagonal cross (saltire), representing Norway's former connection with Denmark. The design served as the common military ensign and state flag of both kingdoms.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1844-1905">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/norway6.webp" alt="Union mark of Norway (1844–1905)">
                     </div>
@@ -107,7 +115,7 @@
                     <p>Known informally as the Sildesalaten (“herring salad”), the union mark combined the colours of the Norwegian and Swedish flags in a quartered pattern of red, white, blue and yellow. Introduced by King Oscar I on 20 June 1844, it was placed in the upper-left canton of the national, state and naval flags of both kingdoms to symbolise their union and equal status. Norway removed it from its merchant and state flags in 1899, although it remained on the naval ensign until the dissolution of the union in 1905.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1940-1945">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/norway7.webp" alt="Flag of the Reichskommissariat Norwegen (1940–1945)">
                     </div>
@@ -115,7 +123,7 @@
                     <p>During the German occupation of Norway in the Second World War, the Reichskommissariat Norwegen used the national flag of Nazi Germany: a red field with a white disc containing a black swastika. The flag represented the German occupation administration headed by Reichskommissar Josef Terboven. Norwegian national symbols were suppressed, and the traditional Norwegian flag became an important symbol of resistance and national identity.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1821-9999,1899-1905">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/norway8.webp" alt="National flag of Norway (1821–present; fully restored in 1899 and 1905)">
                     </div>
@@ -168,6 +176,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

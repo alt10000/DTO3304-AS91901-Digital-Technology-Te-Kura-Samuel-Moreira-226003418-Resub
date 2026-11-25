@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1100-1199">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany1.webp" alt="War Flag of the Holy Roman Empire (12th century)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>The early imperial war banner is associated with a red field bearing a white cross, used as a military standard of the Holy Roman Empire. Medieval imperial banners changed over time, and surviving depictions do not always agree on the precise design.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1400-1523">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany2.webp" alt="Imperial Pavilion of the Holy Roman Empire (1400–1523)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>This imperial standard featured a black double-headed eagle on a golden-yellow field. The double-headed eagle represented the authority of the Holy Roman Emperor and became one of the most recognisable symbols of the Empire.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1226-1525">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany3.webp" alt="Flag of the Teutonic Order State (1226–1525)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>The flag consisted of a black cross on a white field, reflecting the colours and emblem of the Teutonic Order. The black cross became closely associated with the Order's military campaigns and its territorial state in the Baltic region.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1466-1772">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany4.webp" alt="Flag of Royal Prussia (1466–1772)">
                     </div>
@@ -91,7 +99,7 @@
                     <p>This flag displayed a black eagle on a white field, with a golden crown around its neck and an armoured arm holding a sword emerging from it. It represented Royal Prussia, an autonomous region under the Polish Crown following the Second Peace of Thorn in 1466.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1750-1801">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany5.webp" alt="Second Flag of the Kingdom in Prussia and First Flag of the Kingdom of Prussia (1750–1801)">
                     </div>
@@ -99,7 +107,7 @@
                     <p>This design featured a crowned black Prussian eagle on a white field, holding a sword and sceptre. The eagle symbolised the authority of the Hohenzollern dynasty, while the letters FR on its breast stood for Fredericus Rex (King Frederick).</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1801-1803">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany6.webp" alt="Second Flag of the Kingdom of Prussia (1801–1803)">
                     </div>
@@ -107,7 +115,7 @@
                     <p>A revised version of the royal standard, retaining the white background and crowned black eagle but introducing modifications to the eagle, crown and royal insignia. It was used during the reign of Frederick William III.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1803-1892">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany7.webp" alt="Third Flag of the Kingdom of Prussia (1803–1892)">
                     </div>
@@ -115,7 +123,7 @@
                     <p>This version retained the crowned black eagle on a white field, with a smaller crown and further adjustments to the heraldic details. It remained the principal Prussian state flag through much of the 19th century, including the Napoleonic Wars and the unification of Germany.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1892-1918">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany8.webp" alt="Fourth Flag of the Kingdom of Prussia (1892–1918)">
                     </div>
@@ -123,7 +131,7 @@
                     <p>The later Prussian state flag featured a black eagle on a white field, with additional black-and-white horizontal stripes and heraldic details. It was used during the final decades of the monarchy, ending with the abdication of Wilhelm II in 1918.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1918-1933">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany9.webp" alt="Flag of the Free State of Prussia (1918–1933)">
                     </div>
@@ -131,7 +139,7 @@
                     <p>Following the abolition of the monarchy in 1918, Prussia became a republic and retained its traditional black-and-white colours. Its state flag incorporated the Prussian eagle, reflecting continuity with the former kingdom while representing the new republican government.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1848-1849">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany10.webp" alt="Flag of the German Confederation (1848–1849)">
                     </div>
@@ -139,7 +147,7 @@
                     <p>The black-red-gold horizontal tricolour was adopted on 9 March 1848 during the revolutionary movement for German unity. It became a symbol of national unity, constitutional government and civil liberties, and was also used by the short-lived Frankfurt Parliament's proposed German Empire.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1871-1918">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany11.webp" alt="Flag of the German Empire (1871–1918)">
                     </div>
@@ -147,7 +155,7 @@
                     <p>The black-white-red horizontal tricolour became the national flag of the newly unified German Empire in 1871 and was officially designated in 1892. Its colours combined the traditional black and white of Prussia with the red associated with the Hanseatic cities and Brandenburg.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1919-1933">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany12.webp" alt="National Flag of Germany (1919–1933)">
                     </div>
@@ -155,7 +163,7 @@
                     <p>The Weimar Republic adopted the black-red-gold horizontal tricolour in 1919, reviving the colours of the democratic revolutions of 1848. It replaced the imperial black-white-red flag and became a symbol of Germany's new republican government.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1933-1935">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany13.webp" alt="National Flag of Germany (1933–1935)">
                     </div>
@@ -163,7 +171,7 @@
                     <p>After the Nazi seizure of power, the black-white-red imperial tricolour was reintroduced alongside the Nazi Party flag, which featured a red field, a white disc and a black swastika. Both designs were officially used as national flags during this transitional period, until the Nazi flag became the sole national flag in September 1935.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1935-1945">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany14.webp" alt="National Flag of Germany (1935–1945)">
                     </div>
@@ -171,7 +179,7 @@
                     <p>On 15 September 1935, the Nazi Party flag became Germany's sole national flag. It featured a red field with a white disc and a black swastika positioned slightly off-centre; it remained in use until the collapse of Nazi Germany in 1945.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1946-1949">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany15.webp" alt="C-Pennant (C-Doppelstander) (1946–1949)">
                     </div>
@@ -179,7 +187,7 @@
                     <p>Following the Allied occupation of Germany, German merchant ships were prohibited from using a national flag. Instead, they were required to fly the international signal flag C, a blue-white-red horizontally striped double-tailed pennant, to identify their German registration.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1959-1990">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany16.webp" alt="East German State Flag (Staatsflagge) (1959–1990)">
                     </div>
@@ -187,7 +195,7 @@
                     <p>Adopted on 1 October 1959, this flag consisted of the traditional black-red-gold horizontal tricolour with the national emblem of East Germany in the centre. The emblem featured a hammer and compass surrounded by a wreath of grain, symbolising workers, intellectuals and farmers; it was discontinued upon German reunification in 1990.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1949-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany17.webp" alt="National Flag of Germany (1949–present)">
                     </div>
@@ -233,6 +241,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

@@ -60,7 +60,15 @@
             <section class="country-info">
                 <h2>Historical Flags</h2>
                 <p class="flag-intro">Spain’s flag history reflects the union of medieval kingdoms, the dynastic standards of the Habsburgs and Bourbons, the development of military and naval ensigns, and the political changes of the 19th and 20th centuries. Many early designs were royal or military banners rather than national flags in the modern sense.</p>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1230-1406">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain1.webp" alt="Royal standard of the Crown of Castile (1230–1406)">
                     </div>
@@ -68,7 +76,7 @@
                     <p>The royal banner displayed the arms of Castile: a golden castle on a red field. It represented the Castilian monarchy and was used as a dynastic and military standard after the union of Castile and León under Ferdinand III in 1230.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1406-1500">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain2.webp" alt="Royal standard of the Crown of Castile (1406–1500)">
                     </div>
@@ -84,7 +92,7 @@
                     <p>A square version of the Castilian royal banner displayed the castle emblem on a red field. Square banners were practical for ceremonial and military use, although historical depictions do not establish one uniform design or size for every occasion.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1475-1506">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain4.webp" alt="Flag of the infantry forces (1475–1506)">
                     </div>
@@ -92,7 +100,7 @@
                     <p>Associated with the armies of the Catholic Monarchs, this early military banner is commonly depicted with a red saltire on a light field. Its precise historical form and status as a general flag of Spain are less certain than later standards, so it is best understood as a military banner rather than a formally established national flag.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1506-1701">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain5.webp" alt="Cross of Burgundy flag (1506–1701)">
                     </div>
@@ -100,7 +108,7 @@
                     <p>A red, jagged-edged diagonal cross (the Cross of Burgundy) on a white field. Introduced into Spain under Philip the Handsome in 1506, it became a widely used military banner and appeared throughout Spain’s European and overseas territories. It was an important symbol of the Spanish monarchy, although it was not the sole flag used by the empire.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1701-1760">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain6.webp" alt="Flag of the Spanish Empire (1701–1760)">
                     </div>
@@ -108,7 +116,7 @@
                     <p>Under the new Bourbon dynasty of Philip V, white flags bearing the red Cross of Burgundy and the royal coat of arms were used by Spanish forces and in imperial contexts. The arms incorporated the Bourbon-Anjou fleurs-de-lis, marking the change of ruling dynasty.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1760-1785">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain7.webp" alt="Flag of the Spanish Empire (1760–1785)">
                     </div>
@@ -116,7 +124,7 @@
                     <p>A revised version of the Bourbon-era white flag, retaining the red Cross of Burgundy and royal arms but reflecting changes to the royal coat of arms under Charles III. These white flags were still used before the introduction of the red-and-yellow naval ensign in 1785.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1808-1813">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain8.webp" alt="Flag of Spain under Joseph Bonaparte (1808–1813)">
                     </div>
@@ -124,7 +132,7 @@
                     <p>A white flag bearing a new royal coat of arms, divided into six sections representing Castile, León, Aragon, Navarre, Granada and the Spanish overseas possessions, with the Bonaparte imperial eagle at its centre. The design was prescribed by Joseph’s decree of 12 July 1808, although its use was limited by the Peninsular War and opposition to his rule.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1785-1808,1813-1873,1875-1931">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain9.webp" alt="State flag of Spain (1785–1808; 1813–1873; 1875–1931)">
                     </div>
@@ -132,7 +140,7 @@
                     <p>The familiar red-yellow-red horizontal design originated in 1785, when Charles III selected it for the Spanish Navy because it was easier to distinguish at sea than the predominantly white naval flags used by other European powers. The central yellow stripe is twice the width of each red stripe. It was restored after the Napoleonic period and became the standard state flag in the 19th century; the First Republic briefly interrupted its use.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1873-1874">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain10.webp" alt="Flag of the First Spanish Republic (1873–1874)">
                     </div>
@@ -140,7 +148,7 @@
                     <p>The red-yellow-red flag was retained, but the royal crown was removed from the coat of arms to reflect the abolition of the monarchy. The Republic did not introduce the purple stripe that would later distinguish the Second Republic’s flag.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1931-1939">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain11.webp" alt="Flag of the Second Spanish Republic (1931–1939)">
                     </div>
@@ -148,7 +156,7 @@
                     <p>A horizontal tricolour of red, yellow and dark purple, with all three stripes of equal width. The purple stripe was intended to represent Castile alongside the traditional red and yellow colours. The state and military versions carried the republican coat of arms, while the civil flag was generally plain.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1936-1938">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain12.webp" alt="Flag of Spain (Nationalist faction) (1936–1938)">
                     </div>
@@ -156,7 +164,7 @@
                     <p>During the Spanish Civil War, the Nationalist faction initially restored the traditional red-yellow-red bicolour by decree on 29 August 1936. In this early period, different versions and military flags appeared; the familiar flag bearing the Eagle of Saint John was introduced later, in 1938.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1938-1945">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain13.webp" alt="Flag of Spain (1938–1945)">
                     </div>
@@ -164,7 +172,7 @@
                     <p>The red-yellow-red bicolour was retained, with a coat of arms featuring the Eagle of Saint John placed toward the hoist on the yellow stripe. The emblem drew on the heraldic imagery associated with the Catholic Monarchs and was adopted under the Nationalist government in 1938.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1945-1977">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain14.webp" alt="Flag of Spain (1945–1977)">
                     </div>
@@ -172,7 +180,7 @@
                     <p>The same basic bicolour and Eagle of Saint John design continued, but the coat of arms was revised and its details formally regulated in 1945. It remained the flag of Spain through the later Franco period and the first stage of the transition following his death in 1975.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1977-1981">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain15.webp" alt="Flag of Spain (1977–1981)">
                     </div>
@@ -180,7 +188,7 @@
                     <p>The red-yellow-red flag retained the Eagle of Saint John, but the coat of arms was modified again under the regulations of 21 January 1977. This transitional version remained in use until the adoption of the modern coat of arms in 1981.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1981-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain16.webp" alt="National flag and ensign of Spain (1981–present)">
                     </div>
@@ -234,6 +242,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

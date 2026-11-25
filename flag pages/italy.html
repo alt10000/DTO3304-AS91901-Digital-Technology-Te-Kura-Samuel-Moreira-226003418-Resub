@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="-27-380">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy1.webp" alt="Vexilloid of the Roman Empire (27 BC–380 AD)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>The Roman Empire used a variety of military standards rather than a single national flag. One modern reconstruction depicts a crimson-red banner bearing the golden letters SPQR (Senatus Populusque Romanus, “The Senate and People of Rome”), representing the authority of the Roman state. The exact design is not confirmed as a universal imperial standard.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="300-399">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy2.webp" alt="Labarum of Constantine the Great (4th century)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>The labarum was an imperial military standard introduced under Emperor Constantine, featuring the Christian Chi-Rho symbol (☧), formed from the first two Greek letters of Christ's name. It was generally a purple or crimson vexillum with the Chi-Rho above or upon the banner, sometimes accompanied by medallions bearing imperial portraits.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="395-476">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy3.png" alt="Vexilloid of the Western Roman Empire (395–476 AD)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>This reconstructed standard features a crimson field with a golden Chi-Rho symbol in the centre. It represents the Christian identity of the later Western Roman Empire, following the permanent division of the Roman Empire in 395. The exact appearance of a distinct Western Roman imperial flag is not historically established.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1797-1798">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy4.png" alt="First Flag of the Cisalpine Republic (1797–1798)">
                     </div>
@@ -91,7 +99,7 @@
                     <p>Adopted after the establishment of the Cisalpine Republic in northern Italy, this flag consisted of three horizontal stripes of green, white and red, with green at the top. It was one of the earliest official uses of the Italian tricolour, which became an important symbol of Italian national identity.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1798-1802">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy5.webp" alt="Second Flag of the Cisalpine Republic (1798–1802)">
                     </div>
@@ -99,7 +107,7 @@
                     <p>This version changed the horizontal stripes into three vertical bands of green, white and red, with green at the hoist. The new design followed the French-inspired style of revolutionary flags and helped establish the vertical tricolour as the model for later Italian national flags.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1802-1805">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy6.webp" alt="Flag of the Italian Republic (Napoleonic, 1802–1805)">
                     </div>
@@ -107,7 +115,7 @@
                     <p>Established under Napoleon Bonaparte, this flag featured a green square inside a white diamond, all placed on a red rectangular field. It replaced the Cisalpine tricolour and was used by the Italian Republic, a French-influenced state with Napoleon as its president.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1805-1814">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy7.webp" alt="Flag of the Napoleonic Kingdom of Italy (1805–1814)">
                     </div>
@@ -115,7 +123,7 @@
                     <p>When Napoleon transformed the Italian Republic into a kingdom in 1805, the flag retained the green square, white diamond and red field, but added a golden Napoleonic eagle in the centre. It represented Napoleon's Kingdom of Italy until his defeat and the restoration of the pre-Napoleonic states.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1831-1831">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy8.webp" alt="Flag of the Italian United Provinces (1831)">
                     </div>
@@ -123,7 +131,7 @@
                     <p>This revolutionary government adopted a vertical green-white-red tricolour, reflecting the growing movement for Italian national unity. The United Provinces were established during the 1831 uprisings in central Italy but were suppressed by Austrian intervention later that year.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1848-1851">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy9.webp" alt="Flag of the Kingdom of Sardinia (1848–1851)">
                     </div>
@@ -131,7 +139,7 @@
                     <p>During the First Italian War of Independence, King Charles Albert adopted the green-white-red tricolour with the blue-bordered shield of the House of Savoy in the centre. The shield contained a white cross on a red field and distinguished the royal flag from the plain republican tricolours used by Italian nationalist movements.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1859-1860">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy10.webp" alt="Flag of the United Provinces of Central Italy (1859–1860)">
                     </div>
@@ -139,7 +147,7 @@
                     <p>This flag used the Italian green-white-red tricolour with the Savoy shield and a royal crown in the centre. It represented the temporary political union of several central Italian territories before their annexation by the Kingdom of Sardinia.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1851-1861">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy11.webp" alt="State Flag of the Kingdom of Sardinia (1851–1861)">
                     </div>
@@ -147,7 +155,7 @@
                     <p>This version featured the green-white-red tricolour with the Savoy coat of arms, topped by a royal crown. It was used for official state buildings and royal institutions, distinguishing it from the civil flag, which displayed the shield without the crown. After Italian unification in 1861, the design continued as the state flag of the Kingdom of Italy.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1946-2003">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy12.webp" alt="Flag of Italy (1946–2003)">
                     </div>
@@ -155,7 +163,7 @@
                     <p>Following the abolition of the monarchy in 1946, the Savoy coat of arms was removed from the national tricolour. The new republican flag retained three equal vertical bands of green, white and red, and its design was confirmed by the Italian Constituent Assembly in 1947 before becoming constitutionally established in 1948.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="2003-2006">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy13.webp" alt="Flag of Italy (2003–2006)">
                     </div>
@@ -163,7 +171,7 @@
                     <p>In 2003, the Italian government formally specified the colours of the national flag for the first time, describing them as meadow green, milk white and tomato red. This established standard shades for official use, replacing the variations that had appeared in different versions of the flag.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="2006-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy14.webp" alt="Flag of Italy (2006–present)">
                     </div>
@@ -208,6 +216,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

@@ -60,7 +60,15 @@
             <section class="country-info">
                 <h2>Historical Flags</h2>
                 <p class="flag-intro">Swedish flags developed from medieval royal heraldry into the familiar blue flag with a yellow Scandinavian cross. The union with Norway (1814–1905) also influenced several designs, particularly military flags and naval ensigns.</p>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1300-1399">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/sweden1.webp" alt="Royal banner of arms of the House of Bjälbo (14th century)">
                     </div>
@@ -68,7 +76,7 @@
                     <p>A heraldic banner associated with the House of Bjälbo, also known as the Folkunga dynasty. It is depicted with alternating blue and white horizontal stripes, a golden lion and numerous small hearts. The lion and wavy stripes derive from the dynasty’s heraldic arms, rather than from the later Swedish national flag.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1520-1650">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/sweden2.webp" alt="State flag and war ensign (c.1520–mid-17th century)">
                     </div>
@@ -76,7 +84,7 @@
                     <p>An early form of the Swedish blue-and-yellow cross flag, generally depicted with a swallowtail or forked fly. Its origins are sometimes associated with Sweden’s struggle against Danish rule around 1520, but the precise date of its introduction is uncertain. The earliest reliable depictions of a blue flag with a yellow cross date from the 16th century; a royal warrant in 1569 specified the yellow cross for Swedish battle standards.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1650-1815">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/sweden3.webp" alt="State flag and war ensign (mid-17th century–1815)">
                     </div>
@@ -84,7 +92,7 @@
                     <p>The blue flag with a yellow Scandinavian cross continued in use, with a three-tailed swallowtail form serving as the royal and naval ensign. A royal ordinance of 1663 formally distinguished this flag from the square-cut flags permitted to merchant vessels. The design became the basis of Sweden’s later military ensign.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1815-1844">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/sweden4.webp" alt="State flag and military ensign (1815–1844)">
                     </div>
@@ -92,7 +100,7 @@
                     <p>Following the establishment of the union between Sweden and Norway, the Swedish military flag gained a red canton in the upper hoist containing a white diagonal cross. The rest of the flag retained the blue field, yellow Nordic cross and swallowtail shape. This was a common union war ensign used by the navies and armed forces of both kingdoms, while Norway retained the right to use its own merchant flag.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1844-1905">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/sweden5.webp" alt="Naval jack and diplomatic flag (1844–1905)">
                     </div>
@@ -100,7 +108,7 @@
                     <p>The union badge, sometimes nicknamed the herring salad, combined the colours of Sweden and Norway in a quartered cross design. It was used independently as the common naval jack and flown at joint Swedish-Norwegian diplomatic and consular missions. It was also incorporated into the national and military flags of both kingdoms.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1844-1905">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/sweden6.webp" alt="National flag and civil ensign (1844–1905)">
                     </div>
@@ -108,7 +116,7 @@
                     <p>Sweden’s blue flag with a yellow Scandinavian cross was modified by adding the red-and-white union badge in the upper hoist canton. Unlike the military ensign, the civil flag was rectangular rather than swallow-tailed. The badge represented the shared monarchy and the union with Norway; it was removed from Sweden’s civil flag after the union dissolved in 1905.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1905-1906">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/sweden7.webp" alt="National flag and civil ensign (1905–1906)">
                     </div>
@@ -116,7 +124,7 @@
                     <p>Following the dissolution of the union with Norway in 1905, the union badge was removed, restoring the plain blue field and yellow cross. This was the immediate predecessor of the present Swedish flag. The new arrangement was formally regulated by the Flag Act of 22 June 1906, which also established standard proportions and colour specifications.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1906-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/sweden8.webp" alt="Civil and state flag and ensign (1906–present)">
                     </div>
@@ -170,6 +178,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

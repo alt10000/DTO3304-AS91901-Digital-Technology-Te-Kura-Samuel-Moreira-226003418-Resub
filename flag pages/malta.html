@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1530-1798">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/malta1.webp" alt="Flag of the Order of Saint John used in Malta (1530–1798)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>The Order's flag featured a red field with a large white cross. It represented the Knights Hospitaller, who governed Malta from 1530 until Napoleon's French forces captured the islands in 1798. The white cross became strongly associated with the Order and Malta's history.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1813-1875">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/malta2.webp" alt="British Malta state ensign (1813–1875)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>An early British-era Maltese ensign is depicted as a red flag featuring the Union Flag in the upper-left canton and a white Cross of St George. However, the historical evidence for this particular design is uncertain: surviving flag references from the nineteenth century are inconsistent, and it may not have been an officially authorised state ensign throughout this period.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1875-1898">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/malta3.webp" alt="British Malta state ensign (1875–c.1898)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>This design used a blue field with the Union Flag in the canton and a colonial badge in the fly. The badge featured a white Maltese cross above a vertically divided white-and-red panel, surrounded by an ornate decorative border. It reflected Malta's British colonial status while retaining a symbol associated with the island's former Hospitaller rulers.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1898-1923">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/malta4.webp" alt="British Malta state ensign (c.1898–1923)">
                     </div>
@@ -91,7 +99,7 @@
                     <p>The blue ensign retained the Union Flag in the canton but introduced a new badge: a pointed shield divided vertically into white and red halves, outlined in gold and initially placed on a white disc. The Maltese cross was removed from the badge, distinguishing it from the earlier design.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1923-1943">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/malta5.webp" alt="British Malta state ensign (1923–1943)">
                     </div>
@@ -99,7 +107,7 @@
                     <p>This version retained the blue field, Union Flag canton and white-and-red shield, but the white circular background behind the shield was removed. The resulting design was a simpler colonial Blue Ensign and remained in use until the addition of the George Cross to Malta's badge in December 1943.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1943-1964">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/malta6.webp" alt="British Malta state ensign (1943–1964)">
                     </div>
@@ -107,7 +115,7 @@
                     <p>Following the award of the George Cross to the people of Malta in 1942, King George VI authorised its inclusion in the colonial badge on 28 December 1943. The blue ensign consequently displayed a white-and-red shield with a blue canton containing the George Cross, all placed on a white disc. The design remained in use until Malta became independent in 1964.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1964-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/malta7.webp" alt="National flag of Malta (1964–present)">
                     </div>
@@ -153,6 +161,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

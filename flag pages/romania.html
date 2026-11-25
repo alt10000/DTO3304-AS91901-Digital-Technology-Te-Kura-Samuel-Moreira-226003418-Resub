@@ -60,7 +60,15 @@
             <section class="country-info">
                 <h2>Historical Flags</h2>
                 <p class="flag-intro">Romania's modern blue-yellow-red tricolour emerged during the nineteenth-century movement for national unity. Its central design remained remarkably consistent through the monarchy, communist period and modern republic; the most significant changes were to the coat of arms displayed on the yellow stripe.</p>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1862-1866">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/romania1.webp" alt="Flag of the United Principalities (1862–1866)">
                     </div>
@@ -68,7 +76,7 @@
                     <p>Following the political unification of Moldavia and Wallachia in 1862, the horizontal tricolour was rearranged with red at the top, yellow in the middle and blue at the bottom. Versions of the flag displayed the coats of arms of the two principalities together in the centre of the yellow stripe, representing their union. The tricolour's horizontal arrangement preceded the vertical design adopted in 1867.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1867-1948">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/romania2.webp" alt="Flag of Romania (1867–1948)">
                     </div>
@@ -76,7 +84,7 @@
                     <p>On 26 March 1867, the Romanian legislature established the vertical blue-yellow-red tricolour, with blue beside the hoist. The plain version was used by civilians, while official, military and princely versions displayed the national coat of arms in the centre. The design continued through the Principality and Kingdom of Romania until the monarchy was abolished in December 1947 and the communist republic adopted new state symbols in 1948.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1948-1948">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/romania3.webp" alt="RPR flag (January–March 1948)">
                     </div>
@@ -84,7 +92,7 @@
                     <p>A provisional design was prescribed in January 1948 for the newly established Romanian People's Republic. Its proposed coat of arms depicted a tractor, industrial chimneys and a rising sun, surrounded by a wheat wreath bearing the inscription Republica Populară Română and the initials RPR. Although the design was described in Decree No. 3 of 8 January 1948, it was superseded before it could become an established flag in actual use. It is therefore best regarded as a proposed or theoretical version.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1948-1952">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/romania4.webp" alt="RPR flag (1948–1952)">
                     </div>
@@ -92,7 +100,7 @@
                     <p>The vertical blue-yellow-red tricolour was retained, but its central coat of arms was redesigned. The new emblem depicted forested mountains, a rising sun and an oil derrick, surrounded by a wreath of wheat ears. A ribbon at the bottom bore the initials RPR, standing for Republica Populară Română. Unlike the later communist versions, this coat of arms did not have a red star above it.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1952-1965">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/romania5.webp" alt="RPR flag (1952–1965)">
                     </div>
@@ -100,7 +108,7 @@
                     <p>The basic tricolour and landscape-based coat of arms remained, but a red five-pointed star was added above the emblem. The initials RPR continued to appear on the ribbon beneath the coat of arms. This modification was established by the Constitution of 24 September 1952 and brought the flag's imagery more closely into line with communist state symbolism.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1965-1989">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/romania6.webp" alt="RPR flag / Socialist Republic of Romania flag (1965–1989)">
                     </div>
@@ -108,7 +116,7 @@
                     <p>Following the country's renaming as the Socialist Republic of Romania in 1965, the coat of arms was revised to reflect the new state name. The ribbon now carried the words REPUBLICA SOCIALISTĂ ROMÂNIA, and the red star remained above the emblem. A further modification in 1968 changed part of the landscape depicted in the coat of arms, but the overall flag design remained in use until the 1989 Revolution.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1989-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/romania7.webp" alt="Flag of Romania (1989–present)">
                     </div>
@@ -162,6 +170,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

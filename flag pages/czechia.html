@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="800-999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/czechia1.png" alt="Vexilloid of Great Moravia (9th–10th centuries)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>No reliably documented national flag or military standard of Great Moravia has survived. Modern depictions of its vexilloid are therefore reconstructions, often based on later Slavic heraldic traditions rather than confirmed contemporary evidence.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1100-1199">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/czechia2.webp" alt="Banner of the Duchy of Bohemia (12th century)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>A medieval banner associated with the Přemyslid dynasty, featuring a black eagle, generally depicted on a yellow or gold field. The eagle was an early heraldic symbol of the Bohemian rulers, before the double-tailed lion became the kingdom's principal emblem.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1300-1399">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/czechia3.webp" alt="Banner of the Kingdom of Bohemia (14th century)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>A red banner bearing a silver (white) double-tailed lion, the heraldic emblem of the Kingdom of Bohemia. The lion became closely associated with Bohemian royal authority and remains an important part of the Czech national coat of arms.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1918-1920">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/czechia4.webp" alt="Flag of Czechoslovakia (1918–1920)">
                     </div>
@@ -91,7 +99,7 @@
                     <p>The first flag of independent Czechoslovakia was a simple horizontal white-and-red bicolour, based on the traditional colours of Bohemia. It was replaced in 1920 by the familiar design with a blue triangle at the hoist, which distinguished it from Poland's similar flag.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1939-1945">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/czechia5.webp" alt="Flag of the Protectorate of Bohemia and Moravia (1939–1945)">
                     </div>
@@ -99,7 +107,7 @@
                     <p>During the German occupation, the Protectorate used a horizontal tricolour of white, red and blue. The design resembled the Czechoslovak national colours, but the independent Czechoslovak flag with its blue hoist triangle was prohibited under Nazi rule.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1993-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/czechia6.webp" alt="Flag of the Czech Republic (1993–present)">
                     </div>
@@ -144,6 +152,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

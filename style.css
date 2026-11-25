@@ -743,3 +743,32 @@ body.guide-page {
         grid-template-columns: 1fr;
     }
 }
+
+/* ---------- Date search on country pages ---------- */
+.year-filter {
+    margin: 0 0 28px;
+    padding: 14px 18px;
+    background: #fdf4e6;
+    border: 4px solid #000;
+    border-radius: 16px;
+}
+.country-info .year-filter h3 { margin: 0 0 10px; }
+.year-filter label { margin-right: 12px; font-weight: bold; }
+.year-filter input {
+    width: 110px;
+    padding: 6px 8px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+.year-filter button {
+    padding: 6px 14px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.year-filter button:hover { background: #c5e8fb; }
+.country-info .year-filter p { margin: 10px 0 0; font-style: italic; }
+.flag-entry[hidden] { display: none; }

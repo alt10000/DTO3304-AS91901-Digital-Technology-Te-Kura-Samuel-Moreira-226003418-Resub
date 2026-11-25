@@ -60,7 +60,15 @@
             <section class="country-info">
                 <h2>Historical Flags</h2>
                 <p class="flag-intro">Slovak flag history begins with the national movement of 1848, when activists first used red-and-white flags and subsequently added blue, influenced by the wider Pan-Slavic movement. The white-blue-red tricolour eventually became the established Slovak national flag, while the modern state flag adds the Slovak coat of arms to distinguish it from similar Slavic tricolours.</p>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1848-1848">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/slovakia1.png" alt="Flag from the Demands of the Slovak Nation (1848)">
                     </div>
@@ -68,7 +76,7 @@
                     <p>The first Slovak national flag was a horizontal red-and-white bicolour, traditionally depicted with red above white. It was associated with the Slovak national movement and the demands presented to the Hungarian Diet on 11 May 1848, which called for recognition of Slovak national and cultural rights. The red-and-white colours were intended to identify the Slovaks as a distinct nation.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1848-1849,1868-1868,1992-1992">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/slovakia2.webp" alt="Slovak national flag (1848/1849; standardised in 1868; later uses through 1992)">
                     </div>
@@ -76,7 +84,7 @@
                     <p>During the Slovak Uprising of 1848–1849, activists added blue to the original red-and-white colours, creating a tricolour. Several arrangements appeared during the revolutionary period, but the white-blue-red horizontal order gradually became established and was recognised as the Slovak national flag in 1868. It was widely used by Slovak communities in the United States and served as the unofficial Slovak flag within Czechoslovakia from 1919 to 1938. It subsequently became the official flag of autonomous Slovakia (1938–1939), the Slovak Republic (1939–1945), and the Slovak Republic within Czechoslovakia (1990–1992).</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1919-1919">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/slovakia3.webp" alt="Flag of the Slovak Soviet Republic (16 June–7 July 1919)">
                     </div>
@@ -84,7 +92,7 @@
                     <p>The short-lived Slovak Soviet Republic was proclaimed in Prešov during the Hungarian Soviet Republic's military occupation of parts of Slovakia. It adopted communist revolutionary symbolism, with the red flag serving as the principal symbol of the new Soviet-style government. However, reliable evidence for a single formally standardised national flag is limited, and some modern illustrations should be regarded as reconstructions rather than confirmed official designs. The republic ended when Czechoslovak forces entered Prešov on 7 July 1919.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1920-1992">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/slovakia4.webp" alt="Flag of Czechoslovakia (1920–1992)">
                     </div>
@@ -92,7 +100,7 @@
                     <p>Czechoslovakia adopted its familiar flag on 30 March 1920. It consisted of two horizontal stripes, white above red, with a blue triangle extending from the hoist toward the centre. The white and red represented the historical colours of Bohemia, while blue was included to represent Slovakia and its traditional heraldic colours. The flag was used by the First Czechoslovak Republic (1920–1939), the restored republic after the Second World War (1945–1992), and the Czechoslovak government-in-exile during the Second World War.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1939-1945">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/slovakia5.webp" alt="War flag of the Slovak Republic (1939–1945)">
                     </div>
@@ -100,7 +108,7 @@
                     <p>The Slovak Republic, established in March 1939 under the influence of Nazi Germany, introduced a special military flag based on its white-blue-red tricolour. It featured a centrally positioned shield containing a black patriarchal double cross, outlined in black, on a white field. Some examples omitted the white interior of the shield, placing the black cross directly against the tricolour. This military flag was used during the Second World War and disappeared with the collapse of the Slovak Republic in 1945.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1992-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/slovakia6.webp" alt="National flag of Slovakia (1992–present)">
                     </div>
@@ -155,6 +163,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

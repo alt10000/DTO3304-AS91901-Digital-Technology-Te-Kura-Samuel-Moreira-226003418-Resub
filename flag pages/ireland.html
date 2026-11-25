@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1386-1542">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/ireland1.webp" alt="Heraldic Banner of the Lordship of Ireland (1386–1542)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>This banner is traditionally depicted with three golden crowns arranged vertically on a blue field, surrounded by a white border. The design was based on the heraldic arms associated with the Lordship of Ireland and is recorded in connection with Richard II's grant of the title Duke of Ireland to Robert de Vere in 1386. However, its use as an actual historical flag is uncertain, and it is better understood as a heraldic reconstruction.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1542-1801">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/ireland2.webp" alt="Standard of the Kingdom of Ireland (1542–1801)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>The royal standard featured a golden harp with silver strings on a blue field, representing Ireland and its royal identity under the English and later British monarchy. The harp became an established Irish heraldic emblem during the reign of Henry VIII and was incorporated into the British Royal Standard after the 1801 Act of Union.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1937-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/ireland3.webp" alt="Flag of Ireland (1937–present)">
                     </div>
@@ -120,6 +128,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

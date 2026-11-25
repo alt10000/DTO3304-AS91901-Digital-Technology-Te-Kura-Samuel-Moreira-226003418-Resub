@@ -60,7 +60,15 @@
             <section class="country-info">
                 <h2>Historical Flags</h2>
                 <h3 class="flag-section-title">British Flags</h3>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1707-1800">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain1.webp" alt="Flag of the Kingdom of Great Britain (1707–1800)">
                     </div>
@@ -68,7 +76,7 @@
                     <p>Following the Acts of Union in 1707, which united the Kingdoms of England and Scotland, the existing Union Flag of 1606 became the official flag of Great Britain. It featured the red Cross of St George, representing England and Wales, superimposed on the white Saltire of St Andrew, representing Scotland, against a blue background.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1801-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain2.webp" alt="Flag of the United Kingdom (1801–present)">
                     </div>
@@ -81,7 +89,7 @@
                 </div>
 
                 <h3 class="flag-section-title">English Flags</h3>
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1277-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain3.webp" alt="Flag of England – St George&#x27;s Cross (c. 1277–present)">
                     </div>
@@ -89,7 +97,7 @@
                     <p>The red cross of St George on a white field became associated with English soldiers during the reign of King Edward I in the late 13th century. It gradually developed into England's national flag and became particularly prominent under Edward III, who established St George as England's principal patron saint in 1348.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1042-1066">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain4.webp" alt="Banner of St Edward (1042–1066)">
                     </div>
@@ -97,7 +105,7 @@
                     <p>Used as the royal banner of Edward the Confessor, this flag featured a golden cross with fleur-de-lis-shaped ends on a blue field, surrounded by five golden birds known as martlets. It represented the royal authority of one of the last Anglo-Saxon kings of England and remained an important part of English heraldic tradition.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1066-1066">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain5.png" alt="Fighting Banner of Harold Godwinson (1066)">
                     </div>
@@ -105,7 +113,7 @@
                     <p>Associated with King Harold II during the Norman invasion of England, this banner reportedly depicted a fighting warrior embroidered in gold. It was carried into the Battle of Hastings in 1066, where Harold's forces were defeated by William the Conqueror; the banner's exact appearance is uncertain and its modern depiction is a reconstruction based on medieval accounts.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1198-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain6.webp" alt="Royal Banner of England (c. 1198–present)">
                     </div>
@@ -113,7 +121,7 @@
                     <p>The royal banner of England features three golden lions passant guardant, arranged vertically on a red field. The design originated with the heraldic arms of Richard I and became the enduring symbol of the English monarchy, later forming part of the Royal Standard of the United Kingdom.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1198-1340">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain7.webp" alt="Royal Banner of King Richard I (1198–1340)">
                     </div>
@@ -121,7 +129,7 @@
                     <p>Introduced during the reign of Richard I, also known as Richard the Lionheart, this banner featured three golden lions on a red background. The design developed from the royal heraldic arms associated with Richard and became the foundation of the royal arms of England.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1340-1395,1399-1406">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain8.webp" alt="Royal Banner of King Edward III (1340–1395; 1399–1406)">
                     </div>
@@ -129,7 +137,7 @@
                     <p>Edward III introduced a quartered royal banner combining England's three golden lions with the golden fleurs-de-lis of France on a blue background. The French symbols represented his claim to the French throne, which became a major justification for the Hundred Years' War.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1395-1399">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain9.webp" alt="Royal Banner of King Richard II (1395–1399)">
                     </div>
@@ -137,7 +145,7 @@
                     <p>This banner combined the three golden lions of England with the attributed coat of arms of Edward the Confessor, featuring a golden cross and martlets on a blue field. The combination symbolised Richard II's devotion to Edward the Confessor and his attempt to associate his monarchy with the revered Anglo-Saxon king.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1406-1422">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain10.webp" alt="Royal Banner of King Henry IV (1406–1422)">
                     </div>
@@ -145,7 +153,7 @@
                     <p>Henry IV modified the royal banner by replacing the numerous fleurs-de-lis representing France with three fleurs-de-lis, arranged to simplify the French quartering. The banner retained the three golden lions of England and continued to represent the English monarchy for several subsequent reigns.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1554-1558">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain11.webp" alt="Royal Banner of Queen Mary I and King Philip (1554–1558)">
                     </div>
@@ -153,7 +161,7 @@
                     <p>Following the marriage of Mary I of England to Philip II of Spain in 1554, a joint royal banner was introduced, combining the royal arms of England with those of the Habsburg monarchy. The design represented the political and dynastic union between the English and Spanish crowns during their brief joint reign.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1603-1649,1660-1689,1702-1707">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain12.webp" alt="Royal Standard of the House of Stuart (1603–1649; 1660–1689; 1702–1707)">
                     </div>
@@ -161,7 +169,7 @@
                     <p>First introduced by James VI of Scotland and I of England following the Union of the Crowns in 1603, this banner featured the quartered royal arms of England, Scotland and Ireland, alongside the French fleurs-de-lis representing England's historical claim to the French throne. It was the final royal banner used by the independent Kingdom of England before the Acts of Union in 1707.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1694-1702">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain13.webp" alt="Royal Standard of King William III and II (1694–1702)">
                     </div>
@@ -182,7 +190,7 @@
                 </div>
 
                 <h3 class="flag-section-title">Scottish Flags</h3>
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1222-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain15.webp" alt="Royal Banner of Scotland (c. 1222–present)">
                     </div>
@@ -190,7 +198,7 @@
                     <p>First recorded during the reign of King Alexander II, this banner features a red lion rampant with blue claws and tongue, surrounded by a red double border decorated with fleurs-de-lis on a golden-yellow field. It became the royal standard of the Scottish monarchy and remains an important symbol of Scotland's royal heritage, although its official use is now restricted to the Sovereign and authorised representatives.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1606-1707">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain16.webp" alt="Scottish Union Flag (1606–1707)">
                     </div>
@@ -198,7 +206,7 @@
                     <p>Introduced following the Union of the Crowns in 1603 under James VI of Scotland and I of England, this flag combined the white Saltire of St Andrew on a blue background with the red Cross of St George on a white background. Unlike the English version of the Union Flag, the Scottish design placed St Andrew's Cross above St George's Cross, reflecting Scottish objections to the English cross taking precedence.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1542-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/britain17.webp" alt="Flag of Scotland – St Andrew&#x27;s Cross (c. 1542–present)">
                     </div>
@@ -243,6 +251,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

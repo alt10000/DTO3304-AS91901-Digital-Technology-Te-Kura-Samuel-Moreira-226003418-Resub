@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="895-1000">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary1.webp" alt="Flag of the Grand Principality of Hungary (895–1000)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>Traditionally depicted as a red swallow-tailed banner, associated with the early Hungarian tribal confederation and the Árpád dynasty. However, no securely documented original flag from this period survives, so the design should be regarded as a historical reconstruction.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1001-1038">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary2.webp" alt="Flag of the Kingdom of Hungary (1001–1038)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>Early representations of the kingdom's banner are associated with a red field and Christian symbols introduced during the reign of King Stephen I, Hungary's first Christian king. The precise appearance of the flag is uncertain, as surviving evidence from this period is limited.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1046-1172">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary3.webp" alt="Flag of the Kingdom of Hungary (1046–1172)">
                     </div>
@@ -83,7 +91,7 @@
                     <p>This design is traditionally depicted as a red banner bearing a white Latin cross. It represents the kingdom's Christian identity following the establishment of Christianity as the foundation of Hungarian royal authority.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1172-1196">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary4.webp" alt="Flag of the Kingdom of Hungary (1172–1196)">
                     </div>
@@ -91,7 +99,7 @@
                     <p>During the reign of Béla III, the banner is depicted with a white patriarchal (double-barred) cross on a red field. The double cross became an important symbol of Hungarian royal authority and was influenced by Byzantine artistic and political traditions.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1196-1272">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary5.webp" alt="Flag of the Kingdom of Hungary (1196–1272)">
                     </div>
@@ -99,7 +107,7 @@
                     <p>The design developed to show a white patriarchal cross standing on a green triple hill, all on a red field. These elements became enduring parts of the Hungarian coat of arms and represented the country's Christian monarchy.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1272-1301">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary6.webp" alt="Flag of the Árpád Dynasty (1272–1301)">
                     </div>
@@ -107,7 +115,7 @@
                     <p>This banner featured eight horizontal stripes alternating red and white, known as the Árpád stripes. The pattern became associated with the ruling dynasty and was incorporated into Hungary's royal heraldry; the earliest known banner depiction of the stripes dates from the 1270s.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1301-1382">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary7.webp" alt="Flag of the Kingdom of Hungary (1301–1382)">
                     </div>
@@ -115,7 +123,7 @@
                     <p>This design combined the red-and-white Árpád stripes with a blue vertical section at the hoist bearing golden fleurs-de-lis. It reflected the changing dynastic and royal heraldry of Hungary following the extinction of the Árpád dynasty in 1301.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1387-1437">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary8.webp" alt="Flag of the Kingdom of Hungary (1387–1437)">
                     </div>
@@ -123,7 +131,7 @@
                     <p>Under King Sigismund of Luxembourg, the banner combined the Árpád stripes with a white eagle and a white lion on separate red sections. These heraldic symbols reflected the dynastic connections and royal claims associated with the Hungarian monarchy.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1440-1444">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary9.webp" alt="Flag of the Kingdom of Hungary (1440–1444)">
                     </div>
@@ -131,7 +139,7 @@
                     <p>This version displayed the Árpád stripes alongside two white eagles on red fields. It is associated with the reign of King Vladislaus I, whose rule followed a period of dynastic conflict over the Hungarian throne.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1458-1490">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary10.webp" alt="Flag of the Kingdom of Hungary (1458–1490)">
                     </div>
@@ -139,7 +147,7 @@
                     <p>During the reign of Matthias Corvinus, the banner combined the Árpád stripes, the white patriarchal cross on a green triple hill, and a white lion. The central shield of the Hunyadi family was also included, reflecting Matthias's family origins and royal legitimacy.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1490-1516">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary11.webp" alt="Flag of the Kingdom of Hungary (1490–1516)">
                     </div>
@@ -147,7 +155,7 @@
                     <p>This banner featured the Árpád stripes in the first and fourth quarters and the white patriarchal cross on a green triple hill in the second and third quarters. It represented the heraldic traditions of the Hungarian monarchy during the reign of the Jagiellonian kings.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1516-1526">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary12.webp" alt="Flag of the Kingdom of Hungary (1516–1526)">
                     </div>
@@ -155,7 +163,7 @@
                     <p>The banner combined the Árpád stripes, patriarchal cross, three golden crowned leopard heads on blue, and a white lion. A white eagle on a red shield appeared in the centre, bringing together several heraldic symbols associated with Hungary and its ruling dynasty.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1700-1848">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary13.webp" alt="Flag of the Kingdom of Hungary under the Habsburg Monarchy (18th century–1848)">
                     </div>
@@ -163,7 +171,7 @@
                     <p>During the Habsburg period, a black-and-yellow horizontal bicolour was used as an imperial flag and became associated with Habsburg rule over Hungary. These were the colours of the Austrian imperial dynasty, rather than Hungary's traditional national colours.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1848-1849">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary14.webp" alt="Flag Used by Hungarians Revolting against the Habsburgs (1848–1849)">
                     </div>
@@ -171,7 +179,7 @@
                     <p>Revolutionary Hungarians used a distinctive white banner bordered by red-and-green triangular patterns, with the national coat of arms in the centre. It became a symbol of the Hungarian Revolution of 1848 and the struggle for independence from Habsburg authority.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1848-1849">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary15.webp" alt="Flag of the Kingdom of Hungary (1848–1849)">
                     </div>
@@ -179,7 +187,7 @@
                     <p>The traditional red-white-green horizontal tricolour was officially adopted on 11 April 1848, bearing the crowned Hungarian coat of arms in the centre. During the revolution, the crown was subsequently removed from some versions, particularly after Hungary declared its independence in April 1849.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1849-1867">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary16.webp" alt="Flag of the Kingdom of Hungary under Austrian Rule (1849–1867)">
                     </div>
@@ -187,7 +195,7 @@
                     <p>Following the defeat of the Hungarian Revolution, the Habsburg authorities restored imperial control and the black-and-yellow colours. Hungarian national symbols were suppressed during this period, although the red-white-green tricolour continued to be used by Hungarian nationalists.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1867-1869">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary17.webp" alt="Flag of the Kingdom of Hungary (1867–1869)">
                     </div>
@@ -195,7 +203,7 @@
                     <p>Following the Austro-Hungarian Compromise of 1867, Hungary regained its constitutional status within the Dual Monarchy and officially restored the red-white-green tricolour. The crowned Hungarian coat of arms appeared in the centre, symbolising the restored kingdom and its constitutional government.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1869-1874">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary18.webp" alt="Flag of the Kingdom of Hungary (1869–1874)">
                     </div>
@@ -203,7 +211,7 @@
                     <p>The tricolour continued to be used, with changes to the design and presentation of the central coat of arms. The flag represented the Hungarian half of Austria-Hungary, known as Transleithania.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1874-1896">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary19.webp" alt="Flag of the Kingdom of Hungary (1874–1896)">
                     </div>
@@ -211,7 +219,7 @@
                     <p>This version retained the red-white-green horizontal stripes and the crowned Hungarian coat of arms, with further adjustments to its heraldic details and proportions. It was used during a period of growing Hungarian national identity within the Austro-Hungarian Empire.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1896-1915">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary20.webp" alt="Flag of the Kingdom of Hungary (1896–1915)">
                     </div>
@@ -219,7 +227,7 @@
                     <p>For the millennium celebrations marking the traditional 896 date of the Hungarian conquest of the Carpathian Basin, the state flag incorporated a more elaborate coat of arms, sometimes supported by two angels. The design continued to represent Hungary as one of the two constituent states of Austria-Hungary.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1915-1918">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary21.webp" alt="Flag of the Kingdom of Hungary (1915–1918)">
                     </div>
@@ -227,7 +235,7 @@
                     <p>A revised version of the Hungarian tricolour featured the crowned small coat of arms in the centre, following changes to the country's official heraldic arrangements. It remained in use until the dissolution of Austria-Hungary and the end of the monarchy in 1918.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1918-1919">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary22.webp" alt="Flag of the Hungarian People&#x27;s Republic (1918–1919)">
                     </div>
@@ -235,7 +243,7 @@
                     <p>Following the collapse of the Austro-Hungarian Empire in November 1918, Hungary became a republic and retained the red-white-green tricolour. The royal crown was removed from the coat of arms, creating the crownless national emblem associated with the government of Mihály Károlyi.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1919-1919">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary23.webp" alt="Flag of the Hungarian Soviet Republic (1919)">
                     </div>
@@ -243,7 +251,7 @@
                     <p>During the communist revolution of 21 March 1919, the traditional national tricolour was replaced by a plain red flag. It represented the Hungarian Soviet Republic, which lasted until 1 August 1919.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1919-1919">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary24.webp" alt="Flag of the Hungarian People&#x27;s Republic (2–6 August 1919)">
                     </div>
@@ -251,7 +259,7 @@
                     <p>Following the collapse of the Soviet Republic, the red-white-green tricolour was briefly restored with the crownless coat of arms in its centre. This design was used during the short-lived transitional government before the restoration of the crowned national arms.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1919-1946">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary25.webp" alt="Flag of the Hungarian Republic and Kingdom of Hungary (August 1919–1946)">
                     </div>
@@ -259,7 +267,7 @@
                     <p>The red-white-green tricolour returned with the crowned Hungarian coat of arms in the centre. It remained in use during the interwar period and throughout the Kingdom of Hungary under Regent Miklós Horthy, despite the country functioning without a monarch.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1946-1949">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary26.webp" alt="Flag of the Hungarian Republic (1946–1949)">
                     </div>
@@ -267,7 +275,7 @@
                     <p>Following the abolition of the monarchy in February 1946, Hungary adopted the tricolour with the crownless Kossuth coat of arms in the centre. The design represented the new republic and its rejection of the former royal system.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1949-1956">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary27.webp" alt="Flag of the Hungarian People&#x27;s Republic (1949–1956)">
                     </div>
@@ -275,7 +283,7 @@
                     <p>Under the communist government, the traditional tricolour was redesigned with the Rákosi coat of arms in the centre. The emblem featured a red star, a hammer and wheat wreath, reflecting Hungary's new socialist political system.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1957-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/hungary28.webp" alt="Flag of Hungary (1957–present)">
                     </div>
@@ -321,6 +329,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>

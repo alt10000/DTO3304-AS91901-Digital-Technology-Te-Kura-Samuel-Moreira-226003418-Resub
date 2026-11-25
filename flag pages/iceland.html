@@ -59,7 +59,15 @@
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
-                <article class="flag-entry">
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1809-1809">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/iceland1.webp" alt="Proposed Flag of Iceland under Jørgen Jørgensen (1809)">
                     </div>
@@ -67,7 +75,7 @@
                     <p>During his brief rule over Iceland in the summer of 1809, Danish adventurer Jørgen Jørgensen proposed a blue flag bearing three white stockfish (dried cod). It is considered the first known proposal for a distinct Icelandic national flag, although no original example survives and its exact arrangement is uncertain.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1918-1944">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/iceland2.webp" alt="National Flag and Civil Ensign of Iceland (1918–1944)">
                     </div>
@@ -75,7 +83,7 @@
                     <p>Following Iceland's recognition as a separate kingdom in personal union with Denmark on 1 December 1918, the blue flag with a white Nordic cross and a red cross inside it became the official national flag. Its blue was originally specified as a lighter ultramarine shade, distinguishing it from the darker blue used in the modern design.</p>
                 </article>
 
-                <article class="flag-entry">
+                <article class="flag-entry" data-years="1944-9999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/iceland3.webp" alt="Civil Flag and Ensign of Iceland (1944–present)">
                     </div>
@@ -120,6 +128,7 @@
 
     </div>
 
+    <script src="../javascript/yearFilter.js"></script>
 </body>
 
 </html>
