@@ -272,6 +272,28 @@ body {
 
 /* ---------- Interactive map ---------- */
 .europe-map { position: absolute; inset: 0; width: 100%; height: 100%; }
+.europe-map { cursor: grab; touch-action: none; user-select: none; }
+.europe-map.dragging, .europe-map.dragging .map-country { cursor: grabbing; }
+.map-zoom {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.map-zoom button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.map-zoom button:hover { background: #c5e8fb; }
+
 #layer1, #layer2, #layer3, #layer8 { pointer-events: none; }   /* border/coast lines never block clicks */
 .map-country { cursor: pointer; }
 .map-country:hover path {

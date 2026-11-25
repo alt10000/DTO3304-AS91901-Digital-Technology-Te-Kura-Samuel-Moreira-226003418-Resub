@@ -78,7 +78,7 @@
    color-interpolation="auto"
    color-rendering="auto"
    viewBox="0 0 1401.34 1198.34"
-   preserveAspectRatio="xMidYMid slice"
+   preserveAspectRatio="xMidYMid meet"
    class="europe-map"
    font-size="12"
    font-style="normal"
@@ -1541,6 +1541,12 @@
 
     </main>   
 
+    <div class="map-zoom">
+        <button id="zoom-in" aria-label="Zoom in">+</button>
+        <button id="zoom-out" aria-label="Zoom out">&minus;</button>
+        <button id="zoom-reset" aria-label="Reset view">&#8962;</button>
+    </div>
+
     <div id="map-popup" hidden>
         <button class="map-popup-close" aria-label="Close">&times;</button>
         <div class="map-popup-flag"></div>
@@ -1558,7 +1564,77 @@
 
         function closePopup() { popup.hidden = true; }
 
+        // ---- zoom (mouse wheel / buttons) and pan (click and drag) ----
+        var BW = 1401.34, BH = 1198.34;
+        var view = { x: 0, y: 0, w: BW, h: BH };
+        var moved = false;
+
+        function applyView() {
+            map.setAttribute("viewBox", view.x + " " + view.y + " " + view.w + " " + view.h);
+        }
+
+        // fit the whole map into the space to the right of the sidebar
+        function fitView() {
+            var W = map.clientWidth, H = map.clientHeight;
+            var pad = document.querySelector(".sidebar").offsetWidth + 40;
+            var scale = Math.min((W - pad) / BW, H / BH);
+            var left = pad + ((W - pad) - BW * scale) / 2;
+            view.w = W / scale;
+            view.h = H / scale;
+            view.x = -left / scale;
+            view.y = (BH - view.h) / 2;
+            applyView();
+        }
+
+        function zoomAt(factor, cx, cy) {
+            var r = map.getBoundingClientRect();
+            var fx = (cx - r.left) / r.width, fy = (cy - r.top) / r.height;
+            var newW = Math.min(view.w * 3, Math.max(BW / 12, view.w * factor));
+            var k = newW / view.w;
+            view.x += (view.w - view.w * k) * fx;
+            view.y += (view.h - view.h * k) * fy;
+            view.w *= k;
+            view.h *= k;
+            applyView();
+            closePopup();
+        }
+
+        map.addEventListener("wheel", function (e) {
+            e.preventDefault();
+            zoomAt(e.deltaY < 0 ? 0.85 : 1 / 0.85, e.clientX, e.clientY);
+        }, { passive: false });
+
+        var drag = null;
+        map.addEventListener("pointerdown", function (e) {
+            drag = { x: e.clientX, y: e.clientY, vx: view.x, vy: view.y };
+            moved = false;
+        });
+        window.addEventListener("pointermove", function (e) {
+            if (!drag) return;
+            var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+            if (!moved && Math.abs(dx) + Math.abs(dy) < 5) return;
+            if (!moved) { moved = true; map.classList.add("dragging"); closePopup(); }
+            var unit = view.w / map.getBoundingClientRect().width;   // map units per screen pixel
+            view.x = drag.vx - dx * unit;
+            view.y = drag.vy - dy * unit;
+            applyView();
+        });
+        window.addEventListener("pointerup", function () {
+            drag = null;
+            map.classList.remove("dragging");
+        });
+
+        function centreZoom(f) {
+            var r = map.getBoundingClientRect();
+            zoomAt(f, r.left + r.width / 2, r.top + r.height / 2);
+        }
+        document.getElementById("zoom-in").addEventListener("click", function () { centreZoom(0.7); });
+        document.getElementById("zoom-out").addEventListener("click", function () { centreZoom(1 / 0.7); });
+        document.getElementById("zoom-reset").addEventListener("click", function () { fitView(); closePopup(); });
+        fitView();
+
         map.addEventListener("click", function (e) {
+            if (moved) { moved = false; return; }   // that was a drag, not a click
             var shape = e.target.closest(".map-country");
             if (!shape) { closePopup(); return; }
             var c = info[shape.dataset.country];
