@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Greece</h1>
     </header>
@@ -53,12 +54,14 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/greece8.webp" alt="Flag of Greece (1978–present)">
             </div>
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -67,6 +70,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="-336--323">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/greece1.png" alt="Flag of the Macedonian Empire (336–323 BC)">
@@ -131,6 +135,7 @@
                     <p>The current Greek flag consists of nine alternating blue and white horizontal stripes, with a white cross on a blue square in the upper-left corner. Officially established as the sole national flag in 1978, it combines the cross representing Greek Orthodox Christianity with the traditional blue and white colours associated with Greece.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <p><strong>Historical note:</strong> Greece originally maintained two national flag designs: a plain white cross on a blue field for use on land, and the striped version for naval vessels and use abroad. The striped flag became the sole national flag in 1978, ending more than 150 years of parallel use.</p>
                     <p><strong>Historical clarification:</strong> The Byzantine banners in entries 2–4 are not all securely documented in the exact forms shown in modern flag illustrations. In particular, the red-and-gold tetragrammatic cross is associated with the Palaiologan dynasty, rather than being a universal Byzantine flag throughout the earlier Macedonian, Doukas and Komnenian dynasties.</p>
@@ -169,6 +174,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

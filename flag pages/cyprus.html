@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Cyprus</h1>
     </header>
@@ -53,12 +54,14 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/cyprus4.webp" alt="National Flag of Cyprus (2006–present)">
             </div>
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -67,6 +70,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="1821-1827">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/cyprus1.webp" alt="Flag of the Greek War of Independence (1821–1827)">
@@ -99,6 +103,7 @@
                     <p>A 2006 revision refined the colours and the olive branches and fixed the proportions at 2:3, without changing the 1960 design’s meaning. The copper-coloured island recalls the metal the island is traditionally said to be named for, while the white field and green branches stand for peace between Greek and Turkish Cypriots.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <p><strong>Historical note:</strong> Cyprus's national flag was deliberately designed to avoid the colours blue and red, as well as the cross and crescent, so that it would not favour either the Greek or Turkish communities.</p>
                 </div>
@@ -136,6 +141,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

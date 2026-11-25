@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Russia</h1>
     </header>
@@ -53,6 +54,7 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/russia18.webp" alt="Civil and state flag of the Russian Federation (1993–present)">
             </div>
@@ -61,6 +63,7 @@
                 <h2>Historical Flags</h2>
                 <p class="flag-intro">Russian flag history includes several distinct traditions: the early naval ensigns of the Tsardom, the white-blue-red merchant tricolour associated with Peter the Great, the black-yellow-white imperial state flag, and the red banners of the Soviet period. One important distinction is that the tricolour was used as a civil and merchant ensign long before it became Russia's universally recognised national flag.</p>
                 <p class="flag-intro">The list below separates the Russian Soviet Federative Socialist Republic (RSFSR) flags from the flags of the Soviet Union itself. After the USSR was formed in 1922, the RSFSR flag represented one constituent republic, not the entire Union.</p>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -69,6 +72,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="1668-1693">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/russia1.webp" alt="Civil ensign of the Tsardom of Russia (1668–1693)">
@@ -213,6 +217,7 @@
                     <p>The white-blue-red horizontal tricolour was formally re-established as Russia's national flag after the dissolution of the Soviet Union. A presidential decree in 1993 confirmed the familiar arrangement, and the Federal Constitutional Law of 25 December 2000 established its legal description: three equal horizontal stripes of white, blue and red, with a width-to-length ratio of 2:3. Unlike the imperial and Soviet state flags, the modern design contains no coat of arms or other emblem.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <h3 class="flag-notes-title">Historical note</h3>
                     <p>The white-blue-red tricolour originated in Russia's maritime history during the seventeenth century. It became the merchant ensign under Peter the Great in 1705 and eventually the national flag of the Russian Empire in 1896. After the Soviet period, it was restored in 1991 and remains the flag of the Russian Federation.</p>
@@ -262,6 +267,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

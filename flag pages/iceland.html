@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Iceland</h1>
     </header>
@@ -53,12 +54,14 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/iceland3.webp" alt="Civil Flag and Ensign of Iceland (1944–present)">
             </div>
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -67,6 +70,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="1809-1809">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/iceland1.webp" alt="Proposed Flag of Iceland under Jørgen Jørgensen (1809)">
@@ -91,6 +95,7 @@
                     <p>The Republic of Iceland was founded on 17 June 1944, ending the union with Denmark, and the flag kept its design with a darker blue. The colours are traditionally read as red for volcanic fire, white for ice and snow, and blue for the mountains and Atlantic, while the cross shows Iceland’s place among the Nordic countries.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <p><strong>Historical note:</strong> Before developing its own national flag, Iceland generally used the Danish flag because it was under Danish rule. The modern Icelandic flag developed from earlier proposals for a blue-and-white Nordic cross, with the red cross added in 1915 to distinguish it from similar flags.</p>
                 </div>
@@ -128,6 +133,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

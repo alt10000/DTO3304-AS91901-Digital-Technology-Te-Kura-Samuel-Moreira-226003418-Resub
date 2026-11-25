@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Spain</h1>
     </header>
@@ -53,6 +54,7 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/spain16.webp" alt="National flag and ensign of Spain (1981–present)">
             </div>
@@ -60,6 +62,7 @@
             <section class="country-info">
                 <h2>Historical Flags</h2>
                 <p class="flag-intro">Spain’s flag history reflects the union of medieval kingdoms, the dynastic standards of the Habsburgs and Bourbons, the development of military and naval ensigns, and the political changes of the 19th and 20th centuries. Many early designs were royal or military banners rather than national flags in the modern sense.</p>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -68,6 +71,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="1230-1406">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/spain1.webp" alt="Royal standard of the Crown of Castile (1230–1406)">
@@ -196,6 +200,7 @@
                     <p>The current flag consists of three horizontal stripes, red, yellow and red, with the yellow stripe twice as wide as each red stripe. The state flag and naval ensign display the Spanish coat of arms, positioned slightly toward the hoist; the civil flag is plain. The modern coat of arms was established in 1981, and the 1978 Constitution defines the flag’s basic design.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <h3 class="flag-notes-title">Historical note</h3>
                     <p>The Cross of Burgundy was one of the most recognisable symbols of the Spanish monarchy during the Habsburg era, but Spain did not have one universally standardised national flag throughout this period. The red-and-yellow colours were introduced for naval use in 1785 and gradually became national colours, with their use extended to the Spanish Army in 1843.</p>
@@ -242,6 +247,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

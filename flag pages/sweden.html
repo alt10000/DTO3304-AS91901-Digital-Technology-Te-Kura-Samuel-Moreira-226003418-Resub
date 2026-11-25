@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Sweden</h1>
     </header>
@@ -53,6 +54,7 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/sweden8.webp" alt="Civil and state flag and ensign (1906–present)">
             </div>
@@ -60,6 +62,7 @@
             <section class="country-info">
                 <h2>Historical Flags</h2>
                 <p class="flag-intro">Swedish flags developed from medieval royal heraldry into the familiar blue flag with a yellow Scandinavian cross. The union with Norway (1814–1905) also influenced several designs, particularly military flags and naval ensigns.</p>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -68,6 +71,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="1300-1399">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/sweden1.webp" alt="Royal banner of arms of the House of Bjälbo (14th century)">
@@ -132,6 +136,7 @@
                     <p>Sweden’s flag uses the blue and gold of its national arms, which show three gold crowns on blue, with a Nordic cross copied from Denmark’s Dannebrog. The 1906 Flag Act set its form after the union with Norway ended, and the current flag law took effect on 1 January 1983.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <h3 class="flag-notes-title">Historical note</h3>
                     <p>The Swedish flag’s blue and yellow colours are traditionally associated with the Swedish coat of arms. The yellow cross was established as a feature of Swedish military banners in the 16th century, while the three-tailed naval flag was formally regulated in 1663. The union with Norway introduced a combined badge in 1844, but that emblem disappeared from Swedish flags following the union’s dissolution in 1905.</p>
@@ -178,6 +183,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Malta</h1>
     </header>
@@ -53,12 +54,14 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/malta7.webp" alt="National flag of Malta (1964–present)">
             </div>
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -67,6 +70,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="1530-1798">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/malta1.webp" alt="Flag of the Order of Saint John used in Malta (1530–1798)">
@@ -123,6 +127,7 @@
                     <p>Upon independence on 21 September 1964, Malta adopted a white-and-red vertical bicolour, with white at the hoist and red at the fly. The George Cross, awarded in recognition of the Maltese people's bravery during the Second World War, appears in the upper-left corner of the white stripe, outlined in red. The flag's design was based on the island's earlier civil flag, with the blue background behind the George Cross removed.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <p><strong>Historical note:</strong> Malta's flag history reflects three major periods: the rule of the Knights Hospitaller, British colonial administration, and independent statehood. The white and red colours have long been associated with Malta, while the George Cross commemorates the island's resistance and the bravery of its population during the Second World War.</p>
                     <p><strong>Historical clarification:</strong> The 1813 ensign should be treated cautiously because its precise design and official status are not firmly established. Also, the George Cross was awarded in 1942, but it was not incorporated into the colonial badge until the Royal Warrant of 28 December 1943. Malta's modern national flag dates from independence in 1964; it is distinct from the British-era Blue Ensign.</p>
@@ -161,6 +166,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Germany</h1>
     </header>
@@ -53,12 +54,14 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/germany17.webp" alt="National Flag of Germany (1949–present)">
             </div>
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -67,6 +70,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="1100-1199">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/germany1.webp" alt="War Flag of the Holy Roman Empire (12th century)">
@@ -203,6 +207,7 @@
                     <p>The modern German flag consists of three horizontal stripes of black, red and gold. Adopted by West Germany in 1949 and retained following reunification on 3 October 1990, it revived the democratic colours associated with the German national movement of the 19th century.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <p><strong>Historical note:</strong> Germany's flag history reflects its changing political identity, from the imperial eagle and Prussian heraldry to the black-white-red colours of the German Empire and the black-red-gold colours of republican Germany. The modern tricolour represents the tradition of German unity, democracy and freedom associated with the revolutions of 1848 and the Weimar Republic.</p>
                     <p>One distinction: The East German flag was originally identical to the plain black-red-gold West German flag from 1949 to 1959. The national emblem was added in 1959 to distinguish the two German states.</p>
@@ -241,6 +246,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Portugal</h1>
     </header>
@@ -53,6 +54,7 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/portugal15.webp" alt="Portuguese National Flag (1910–present)">
             </div>
@@ -61,6 +63,7 @@
                 <h2>Historical Flags</h2>
                 <p class="flag-intro">Portugal's early royal flags evolved alongside the country's coat of arms. The successive designs generally altered the number and arrangement of the blue escutcheons and the red bordure, while retaining the white shield and blue-and-white heraldic tradition. These were primarily royal and military standards; Portugal did not have a modern national flag in the contemporary sense during the medieval period.</p>
                 <p class="flag-intro">A useful distinction for this sequence: some dates mark a change in the monarch, not necessarily a newly adopted flag. For example, the 1521 entry largely continues the design established under Manuel I, while the 1826 entry belongs to the final period of the white royal flag. The Parques de Sintra historical timeline is particularly helpful for following these successive royal arms.</p>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -69,6 +72,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="1095-1143">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/portugal1.webp" alt="Royal flag (1095–1143)">
@@ -189,6 +193,7 @@
                     <p>Following the revolution of 5 October 1910 and the establishment of the Portuguese Republic, the blue-and-white royal flag was replaced by a vertically divided green-and-red flag. The national coat of arms, surrounded by a white border, is placed over a golden armillary sphere at the division between the colours. The new design was approved by the Provisional Government on 29 November 1910 and formally adopted by decree on 19 June 1911.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <h3 class="flag-notes-title">Historical note</h3>
                     <p>The Portuguese flag evolved from the royal arms of the House of Burgundy into the familiar five blue escutcheons, red border and golden castles. The armillary sphere later became an important national symbol, reflecting Portugal's maritime expansion. The modern green-and-red flag replaced the royal blue-and-white colours after the 1910 revolution.</p>
@@ -235,6 +240,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

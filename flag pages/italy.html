@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Italy</h1>
     </header>
@@ -53,12 +54,14 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/italy14.webp" alt="Flag of Italy (2006–present)">
             </div>
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -67,6 +70,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="-27-380">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/italy1.webp" alt="Vexilloid of the Roman Empire (27 BC–380 AD)">
@@ -179,6 +183,7 @@
                     <p>A decree of 14 April 2006 revised the official shades to fern green, bright white and flame scarlet, aiming for brighter and more consistent colours. The design remained the vertical tricolour adopted in 1948.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <p><strong>Historical note:</strong> The Italian tricolour was first officially adopted by the Cispadane Republic on 7 January 1797, making it one of the earliest national symbols of the Italian unification movement. Its green, white and red colours were later adopted by the Kingdom of Sardinia and became the national colours of the unified Kingdom of Italy in 1861. After the monarchy ended in 1946, the Savoy shield was removed, leaving the republican tricolour used today.</p>
                 </div>
@@ -216,6 +221,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

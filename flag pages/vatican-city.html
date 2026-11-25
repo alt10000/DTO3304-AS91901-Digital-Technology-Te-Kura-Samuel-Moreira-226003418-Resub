@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Vatican City</h1>
     </header>
@@ -53,6 +54,7 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/vatican-city8.webp" alt="National and state flag of Vatican City (2023–present)">
             </div>
@@ -60,6 +62,7 @@
             <section class="country-info">
                 <h2>Historical Flags</h2>
                 <p class="flag-intro">The flags of the Papacy developed from medieval banners representing the authority of the pope and the Holy Roman Church into the yellow-and-white flag of the modern Vatican City State. For much of its history, the Papal States used several different flags for military, naval, ceremonial and civil purposes rather than one uniform national flag. Amazon Web Services, Inc.</p>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -68,6 +71,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="1294-1303">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/vatican-city1.webp" alt="Banner of Pope Boniface VIII (1294–1303)">
@@ -132,6 +136,7 @@
                     <p>A new Fundamental Law promulgated by Pope Francis on 13 May 2023 and effective from 7 June 2023 again defined the flag and arms of Vatican City State. The yellow-and-white bicolour with crossed keys and tiara was retained, with only the legal description updated.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <h3 class="flag-notes-title">Historical note</h3>
                     <p>The yellow-and-white colours originated as military identification colours in 1808, when Pope Pius VII used them to distinguish troops loyal to the Papacy from those serving Napoleon. They later became associated with the Papal States and, following the creation of Vatican City in 1929, formed the basis of its national flag. The crossed keys symbolise Saint Peter, while the papal tiara represents the authority of the papacy.</p>
@@ -178,6 +183,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

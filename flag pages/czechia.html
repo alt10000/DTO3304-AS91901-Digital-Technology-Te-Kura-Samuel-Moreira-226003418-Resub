@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Czechia</h1>
     </header>
@@ -53,12 +54,14 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/czechia6.webp" alt="Flag of the Czech Republic (1993–present)">
             </div>
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -67,6 +70,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="800-999">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/czechia1.png" alt="Vexilloid of Great Moravia (9th–10th centuries)">
@@ -115,6 +119,7 @@
                     <p>Adopted on 1 January 1993 following the dissolution of Czechoslovakia, this flag retained the former Czechoslovak design: two horizontal bands of white and red with a blue triangle extending from the hoist. Although originally created for Czechoslovakia in 1920, the Czech Republic continued using it as its national flag after independence.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <p><strong>Historical note:</strong> The Czech flag's colours derive from Bohemian heraldry: white represents the silver lion and red its shield. Blue was added in 1920 to distinguish the Czechoslovak flag from Poland's white-and-red flag, and also came to represent Slovakia and Moravia.</p>
                 </div>
@@ -152,6 +157,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

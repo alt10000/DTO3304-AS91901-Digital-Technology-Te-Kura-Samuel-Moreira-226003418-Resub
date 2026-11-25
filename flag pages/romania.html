@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Romania</h1>
     </header>
@@ -53,6 +54,7 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/romania7.webp" alt="Flag of Romania (1989–present)">
             </div>
@@ -60,6 +62,7 @@
             <section class="country-info">
                 <h2>Historical Flags</h2>
                 <p class="flag-intro">Romania's modern blue-yellow-red tricolour emerged during the nineteenth-century movement for national unity. Its central design remained remarkably consistent through the monarchy, communist period and modern republic; the most significant changes were to the coat of arms displayed on the yellow stripe.</p>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -68,6 +71,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="1862-1866">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/romania1.webp" alt="Flag of the United Principalities (1862–1866)">
@@ -124,6 +128,7 @@
                     <p>During the Romanian Revolution of December 1989, demonstrators cut the communist coat of arms out of the centre of the tricolour, creating the famous flag with a hole. This became a powerful symbol of opposition to Nicolae Ceaușescu's regime. On 27 December 1989, the National Salvation Front officially restored the plain vertical blue-yellow-red tricolour. Romania later adopted a new national coat of arms in 1992, but it was not added to the national flag.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <h3 class="flag-notes-title">Historical note</h3>
                     <p>Romania's national colours have remained blue, yellow and red since the nineteenth century, although their arrangement changed from horizontal to vertical in 1867. During the communist period, the central yellow stripe carried successive versions of the state coat of arms. The 1989 Revolution removed this emblem from the flag, restoring the plain tricolour still used today.</p>
@@ -170,6 +175,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

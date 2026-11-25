@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>France</h1>
     </header>
@@ -53,12 +54,14 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/france12.webp" alt="Flag of France (2020–present)">
             </div>
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -67,6 +70,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="700-899">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/france1.png" alt="Oriflamme of Charlemagne (traditionally 8th–9th centuries)">
@@ -163,6 +167,7 @@
                     <p>The current version uses a darker navy blue, returning to a shade closer to the original revolutionary-era design. President Emmanuel Macron introduced the change in 2020, although it became publicly known in 2021; the flag retains the familiar vertical blue, white and red stripes.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <p><strong>Historical note:</strong> France's flag history reflects the country's changing political systems, from medieval royal banners bearing golden fleurs-de-lis to the revolutionary tricolour. The blue-white-red design, first introduced during the French Revolution, became the enduring national symbol despite temporary interruptions during the Bourbon Restoration.</p>
                 </div>
@@ -200,6 +205,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

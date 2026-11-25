@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Belarus</h1>
     </header>
@@ -53,12 +54,14 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/belarus11.webp" alt="Modern National Flag and Ensign of Belarus (2012–present)">
             </div>
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -67,6 +70,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="1918-1919">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/belarus1.webp" alt="White-Red-White Flag of the Belarusian Democratic Republic (1918–1919; in exile thereafter)">
@@ -155,6 +159,7 @@
                     <p>In 2012, Belarus introduced a slightly revised version of its red-and-green flag, featuring a thicker and more detailed traditional ornamental pattern along the hoist. The design retained the colours and general arrangement introduced in 1995, with the updated ornament intended to more accurately reproduce traditional Belarusian decorative embroidery.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <p><strong>Historical note:</strong> The Belarusian flag has a particularly divided history, with the white-red-white tricolour representing the country's pre-Soviet independence movement and the red-and-green design representing its Soviet and post-Soviet state traditions. The two designs remain politically significant in Belarus today.</p>
                 </div>
@@ -192,6 +197,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 

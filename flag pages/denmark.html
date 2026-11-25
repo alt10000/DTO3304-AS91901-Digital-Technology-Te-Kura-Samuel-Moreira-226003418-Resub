@@ -15,6 +15,7 @@
 
     <!-- header: one big title row across the full width -->
     <header class="country-header">
+        <!-- link back to the map page -->
         <a href="../map.html" class="back-link">&larr; Back to map</a>
         <h1>Denmark</h1>
     </header>
@@ -53,12 +54,14 @@
         <!-- centre column: flag image and information text -->
         <main class="country-main">
 
+            <!-- current flag shown at the top -->
             <div class="country-flag-box">
                 <img src="../images/flag images/denmark3.webp" alt="Civil Flag and Ensign of Denmark (1748–present)">
             </div>
 
             <section class="country-info">
                 <h2>Historical Flags</h2>
+                <!-- from and to year boxes used by the date search -->
                 <div class="year-filter">
                     <h3>Search by date</h3>
                     <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
@@ -67,6 +70,7 @@
                     <p id="year-message" aria-live="polite"></p>
                 </div>
 
+                <!-- one entry per historical flag, data-years holds its dates for the date search -->
                 <article class="flag-entry" data-years="1016-1035">
                     <div class="flag-entry-image">
                         <img src="../images/flag images/denmark1.webp" alt="Flag of the North Sea Empire (1016–1035)">
@@ -91,6 +95,7 @@
                     <p>Legend says the Dannebrog, a white cross on red, fell from the sky during a Danish victory at the Battle of Lyndanisse in 1219, though the first reliable records come from the 14th century. The cross’s shorter arm towards the hoist created the pattern later copied across the Nordic countries. It was prescribed for merchant ships in 1748 and is among the oldest national flags still in use.</p>
                 </article>
 
+                <!-- shaded box with extra historical notes -->
                 <div class="flag-notes">
                     <p><strong>Historical note:</strong> The legend claims that the Dannebrog fell from heaven during the Battle of Lyndanisse in Estonia on 15 June 1219, helping the Danish forces win. However, the earliest known surviving depiction dates from the late 14th century, and its historical origins remain uncertain.</p>
                 </div>
@@ -128,6 +133,7 @@
 
     </div>
 
+    <!-- loads script that hides flags outside the searched years -->
     <script src="../javascript/yearFilter.js"></script>
 </body>
 
