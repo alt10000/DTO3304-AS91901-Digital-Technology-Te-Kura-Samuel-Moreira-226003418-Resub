@@ -1583,6 +1583,14 @@
             view.h = H / scale;
             view.x = -left / scale;
             view.y = (BH - view.h) / 2;
+
+            // start zoomed in on central Europe (change START_ZOOM to taste; 1 = whole map)
+            var START_ZOOM = 1.8, focusX = 540, focusY = 740;
+            var sx = (pad + (W - pad) / 2) / W, sy = 0.5;          // where the focus point should sit on screen
+            view.w /= START_ZOOM;
+            view.h /= START_ZOOM;
+            view.x = focusX - view.w * sx;
+            view.y = focusY - view.h * sy;
             applyView();
         }
 
