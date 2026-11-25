@@ -14,6 +14,7 @@ body {
 }
 
 /* ---------- Rotated flag grid ---------- */
+/* grid of flag rows, oversized and rotated behind the title */
 .flag-grid {
     position: fixed;
     top: 50%;
@@ -29,10 +30,12 @@ body {
     z-index: 0;
 }
 
+/* hides the part of each track that is outside the row */
 .flag-row {
     overflow: hidden;
 }
 
+/* long strip of flags that slides left in a loop */
 .flag-track {
     display: flex;
     width: max-content;           /* track is as wide as all its flags */
@@ -61,6 +64,7 @@ body {
 
 
 /* ---------- Foreground content ---------- */
+/* keeps the title and buttons above the flag grid */
 .landing-title,
 .landing-buttons {
     position: relative;
@@ -123,6 +127,7 @@ body {
 }
 
 /* ---------- Map page: header ---------- */
+/* strip of moving flags along the top of the page */
 .map-header {
     position: relative;
     height: 80px;
@@ -177,6 +182,7 @@ body {
 }
 
 /* ---------- Map page: sidebar ---------- */
+/* floating list on the left of the map */
 .sidebar {
     position: absolute;
     top: 15px;
@@ -249,6 +255,7 @@ body {
     font-size: 1.05rem;
 }
 
+/* oval flag icon beside each name in the list */
 .country .flag {
     flex: 0 0 auto;
     width: 62px;
@@ -271,9 +278,11 @@ body {
 }
 
 /* ---------- Interactive map ---------- */
+/* map svg fills the map area and can be dragged around */
 .europe-map { position: absolute; inset: 0; width: 100%; height: 100%; }
 .europe-map { cursor: grab; touch-action: none; user-select: none; }
 .europe-map.dragging, .europe-map.dragging .map-country { cursor: grabbing; }
+/* zoom buttons sitting in the bottom corner */
 .map-zoom {
     position: fixed;
     right: 20px;
@@ -296,14 +305,17 @@ body {
 
 #layer1, #layer2, #layer3, #layer8 { pointer-events: none; }   /* border/coast lines never block clicks */
 .map-country { cursor: pointer; }
+/* black outline on the country under the mouse */
 .map-country:hover path {
     stroke: #000 !important;
     stroke-width: 3px !important;
     vector-effect: non-scaling-stroke;
 }
+/* invisible circle that makes tiny countries easy to hit */
 .map-country.micro circle { fill: rgba(0, 0, 0, 0.001); stroke: none; }
 .map-country.micro:hover circle { stroke: #000; stroke-width: 2px; }
 
+/* popup that appears above the clicked country */
 #map-popup {
     position: fixed;
     z-index: 10;
@@ -329,6 +341,7 @@ body {
     border-bottom: 6px solid #000;
     transform: translateX(-50%) rotate(45deg);
 }
+/* rounded box around the flag in the popup */
 .map-popup-flag {
     aspect-ratio: 3 / 2;
     margin: 0 4px 8px;
@@ -414,6 +427,7 @@ body.country-page {
     border-right: 4px solid #000;
 }
 
+/* column of flags that slides down in a loop */
 .side-track {
     display: flex;
     flex-direction: column;
@@ -529,6 +543,7 @@ body.country-page {
     font-style: italic;
 }
 
+/* one historical flag with its image, title and description */
 .flag-entry {
     margin: 0 0 30px;
 }
@@ -551,6 +566,7 @@ body.country-page {
     max-height: 260px;           /* tall flags are scaled down; the box shrinks with them */
 }
 
+/* shaded box for extra notes under a flag */
 .flag-notes {
     margin: 10px 0 30px;
     padding: 16px 20px 6px;
@@ -745,6 +761,7 @@ body.guide-page {
 }
 
 /* ---------- Date search on country pages ---------- */
+/* box holding the from and to year search */
 .year-filter {
     margin: 0 0 28px;
     padding: 14px 18px;
@@ -771,9 +788,11 @@ body.guide-page {
 }
 .year-filter button:hover { background: #c5e8fb; }
 .country-info .year-filter p { margin: 10px 0 0; font-style: italic; }
+/* hides entries that do not match the years searched */
 .flag-entry[hidden] { display: none; }
 
 /* ---------- Culture group pages ---------- */
+/* row of small flags at the top of a group page */
 .group-flags {
     display: flex;
     flex-wrap: wrap;
@@ -799,6 +818,7 @@ body.guide-page {
 
 .group-section { margin-top: 28px; }
 
+/* grid of flag cards that wraps to fit the width */
 .compare-row {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
@@ -806,6 +826,7 @@ body.guide-page {
     margin-top: 18px;
 }
 .compare-card { margin: 0; text-align: center; }
+/* outlined box that keeps every flag the same shape */
 .compare-card-image {
     border: 5px solid #000;
     border-radius: 20px;
@@ -825,6 +846,7 @@ body.guide-page {
 .compare-card figcaption a:hover { color: #1a5fb4; }
 .compare-card figcaption span { display: block; }
 
+/* links to the other culture groups */
 .group-nav { margin: 8px 0 0; padding-left: 20px; line-height: 1.8; font-size: 1.05rem; }
 .group-nav a { color: #1a5fb4; font-weight: bold; }
 

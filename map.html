@@ -65,8 +65,9 @@
         <h1 class="map-title">Historia</h1>
     </header>
 
-    <!-- map area (empty for now) with the sidebar floating on the left -->
+    <!-- map area with the sidebar floating on the left -->
     <main class="map-area">
+<!-- inline europe map, each country is wrapped in a group the script can hover and click -->
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -1474,6 +1475,7 @@
          sodipodi:nodetypes="ccccc" />
     </g>
   </g>
+<!-- invisible circles so tiny countries can still be hovered and clicked -->
 <g id="micro-hits">
 <g class="map-country micro" data-country="andorra"><circle cx="309.9" cy="952.3" r="7"/></g>
 <g class="map-country micro" data-country="liechtenstein"><circle cx="499.9" cy="816.0" r="7"/></g>
@@ -1485,6 +1487,7 @@
 </svg>
 
 
+        <!-- sidebar with the search bar, culture groups and country list -->
         <aside class="sidebar">
                 <input type="text" id="country-search" class="sidebar-search"
                    placeholder="Search Bar" autocomplete="off" aria-label="Search countries">
@@ -1550,12 +1553,14 @@
 
     </main>   
 
+    <!-- buttons that zoom the map in and out, or reset it -->
     <div class="map-zoom">
         <button id="zoom-in" aria-label="Zoom in">+</button>
         <button id="zoom-out" aria-label="Zoom out">&minus;</button>
         <button id="zoom-reset" aria-label="Reset view">&#8962;</button>
     </div>
 
+    <!-- empty popup filled with the clicked country by JavaScript -->
     <div id="map-popup" hidden>
         <button class="map-popup-close" aria-label="Close">&times;</button>
         <div class="map-popup-flag"></div>
@@ -1568,16 +1573,22 @@
         // Country info for the map popup
         var info = {"albania":{"name":"Albania","flag":"images/flag images/albania.svg","text":"Ruled in turn by Rome, Byzantium and the Ottomans, Albania declared independence in 1912. Its double-headed eagle recalls the medieval hero Skanderbeg.","page":"flag pages/albania.html"},"andorra":{"name":"Andorra","flag":"images/flag images/andorra.svg","text":"A tiny Pyrenean principality, co-ruled by a French and a Spanish-Catalan prince since 1278.","page":"flag pages/andorra.html"},"austria":{"name":"Austria","flag":"images/flag images/austria.svg","text":"Seat of the Habsburgs, whose dynasty ruled a vast multinational empire in central Europe for over six centuries.","page":"flag pages/austria.html"},"belarus":{"name":"Belarus","flag":"images/flag images/belarus.png","text":"Long divided between Lithuanian, Polish and Russian rule, Belarus became a Soviet republic before gaining independence in 1991.","page":"flag pages/belarus.html"},"belgium":{"name":"Belgium","flag":"images/flag images/belgium.png","text":"Independent from the Netherlands since 1830, Belgium sits where Latin and Germanic Europe meet and has been a battleground for centuries.","page":"flag pages/belgium.html"},"bosnia-and-herzegovina":{"name":"Bosnia and Herzegovina","flag":"images/flag images/bosnia.svg","text":"A crossroads of Catholic, Orthodox and Muslim cultures, shaped by medieval kingdoms, Ottoman rule and Austro-Hungarian administration.","page":"flag pages/bosnia.html"},"britain":{"name":"Britain","flag":"images/flag images/britain.svg","text":"An island realm that grew from rival kingdoms into the United Kingdom, and later built the largest empire in history.","page":"flag pages/britain.html"},"bulgaria":{"name":"Bulgaria","flag":"images/flag images/bulgaria.svg","text":"One of Europe's oldest states, founded in 681. It built two medieval empires before centuries under Ottoman rule.","page":"flag pages/bulgaria.html"},"croatia":{"name":"Croatia","flag":"images/flag images/croatia.svg","text":"A medieval kingdom on the Adriatic, later bound to Hungary and the Habsburgs for centuries.","page":"flag pages/croatia.html"},"cyprus":{"name":"Cyprus","flag":"images/flag images/cyprus.svg","text":"An island at the crossroads of the eastern Mediterranean, ruled in turn by Byzantines, Venetians, Ottomans and the British.","page":"flag pages/cyprus.html"},"czechia":{"name":"Czechia","flag":"images/flag images/czechia.svg","text":"Once the Kingdom of Bohemia, a heartland of the Holy Roman Empire, and later part of Czechoslovakia.","page":"flag pages/czechia.html"},"denmark":{"name":"Denmark","flag":"images/flag images/denmark.png","text":"Home to one of the world's oldest monarchies, and once the head of the Kalmar Union that joined all of Scandinavia.","page":"flag pages/denmark.html"},"estonia":{"name":"Estonia","flag":"images/flag images/estonia.png","text":"Ruled in turn by Danes, Germans, Swedes and Russians, Estonia first won independence in 1918.","page":"flag pages/estonia.html"},"finland":{"name":"Finland","flag":"images/flag images/finland.svg","text":"Part of Sweden for centuries, then a Russian grand duchy, Finland became independent in 1917.","page":"flag pages/finland.html"},"france":{"name":"France","flag":"images/flag images/france.webp","text":"A kingdom that became a republic and then an empire under Napoleon, shaping the politics of Europe for centuries.","page":"flag pages/france.html"},"germany":{"name":"Germany","flag":"images/flag images/germany.svg","text":"Germany is a land of countless duchies, kingdoms and old empires, all powerful and influential in their own ways.","page":"flag pages/germany.html"},"greece":{"name":"Greece","flag":"images/flag images/greece.svg","text":"Birthplace of democracy and classical civilisation, later part of the Byzantine and Ottoman worlds before winning independence in the 1820s.","page":"flag pages/greece.html"},"hungary":{"name":"Hungary","flag":"images/flag images/hungary.svg","text":"Founded by the Magyars in the 9th century, Hungary grew into a great kingdom and later one half of Austria-Hungary.","page":"flag pages/hungary.html"},"iceland":{"name":"Iceland","flag":"images/flag images/iceland.svg","text":"Settled by Norse seafarers in the 9th century, and home to the Althing, one of the oldest parliaments in the world.","page":"flag pages/iceland.html"},"ireland":{"name":"Ireland","flag":"images/flag images/ireland.svg","text":"Once a land of rival kingdoms, then under English and British rule, Ireland won its independence in the early 1920s.","page":"flag pages/ireland.html"},"italy":{"name":"Italy","flag":"images/flag images/italy.svg","text":"The heart of ancient Rome, later split into city-states, republics and kingdoms until unification in 1861.","page":"flag pages/italy.html"},"kosovo":{"name":"Kosovo","flag":"images/flag images/kosovo.svg","text":"A region with deep medieval Serbian and Albanian history, Kosovo declared independence in 2008.","page":"flag pages/kosovo.html"},"latvia":{"name":"Latvia","flag":"images/flag images/latvia.svg","text":"Ruled by Germanic knights, Poles, Swedes and Russians before declaring independence in 1918.","page":"flag pages/latvia.html"},"liechtenstein":{"name":"Liechtenstein","flag":"images/flag images/liechtenstein.svg","text":"A tiny Alpine principality created in 1719 and named after its ruling dynasty, a rare survivor of the Holy Roman Empire.","page":"flag pages/liechtenstein.html"},"lithuania":{"name":"Lithuania","flag":"images/flag images/lithuania.svg","text":"The heart of the vast Grand Duchy of Lithuania, which once stretched from the Baltic almost to the Black Sea.","page":"flag pages/lithuania.html"},"luxembourg":{"name":"Luxembourg","flag":"images/flag images/luxembourg.svg","text":"A small, once heavily fortified state that is today the only grand duchy left in the world.","page":"flag pages/luxembourg.html"},"malta":{"name":"Malta","flag":"images/flag images/malta.svg","text":"A strategic Mediterranean island ruled by Phoenicians, Romans, the Knights of St John and the British.","page":"flag pages/malta.html"},"moldova":{"name":"Moldova","flag":"images/flag images/moldova.svg","text":"Once part of the medieval Principality of Moldavia, later divided between Ottoman, Romanian and Russian influence.","page":"flag pages/moldova.html"},"monaco":{"name":"Monaco","flag":"images/flag images/monaco.png","text":"A tiny coastal principality that has been ruled by the Grimaldi family since 1297.","page":"flag pages/monaco.html"},"montenegro":{"name":"Montenegro","flag":"images/flag images/montenegro.svg","text":"A mountain stronghold that resisted Ottoman rule for centuries and became a kingdom in 1910.","page":"flag pages/montenegro.html"},"netherlands":{"name":"Netherlands","flag":"images/flag images/netherlands.svg","text":"Won its freedom from Spain in the 1500s and rose to become a wealthy maritime republic and global trading power.","page":"flag pages/netherlands.html"},"north-macedonia":{"name":"North Macedonia","flag":"images/flag images/macedonia.svg","text":"A crossroads of Byzantine, Bulgarian, Serbian and Ottoman history, it became independent from Yugoslavia in 1991.","page":"flag pages/macedonia.html"},"norway":{"name":"Norway","flag":"images/flag images/norway.svg","text":"Home of the Viking kingdoms, later united with Denmark and then Sweden before gaining full independence in 1905.","page":"flag pages/norway.html"},"poland":{"name":"Poland","flag":"images/flag images/poland.svg","text":"Once part of the vast Polish-Lithuanian Commonwealth, then partitioned and erased from the map for 123 years until 1918.","page":"flag pages/poland.html"},"portugal":{"name":"Portugal","flag":"images/flag images/portugal.svg","text":"One of Europe's oldest nation-states, whose explorers opened sea routes to Africa, Asia and Brazil.","page":"flag pages/portugal.html"},"romania":{"name":"Romania","flag":"images/flag images/romania.svg","text":"Formed from the union of Wallachia and Moldavia in 1859, with roots reaching back to Roman Dacia.","page":"flag pages/romania.html"},"russia":{"name":"Russia","flag":"images/flag images/russia.svg","text":"From medieval Rus' to the empire of the tsars, it grew over the centuries into the largest country on Earth.","page":"flag pages/russia.html"},"san-marino":{"name":"San Marino","flag":"images/flag images/san-marino.svg","text":"Traditionally founded in 301 AD and claimed to be the oldest surviving republic in the world.","page":"flag pages/san-marino.html"},"serbia":{"name":"Serbia","flag":"images/flag images/serbia.svg","text":"A medieval kingdom and empire, later under Ottoman rule, that won its independence in the 19th century.","page":"flag pages/serbia.html"},"slovakia":{"name":"Slovakia","flag":"images/flag images/slovakia.svg","text":"Long part of the Kingdom of Hungary, then of Czechoslovakia, Slovakia has been independent since 1993.","page":"flag pages/slovakia.html"},"slovenia":{"name":"Slovenia","flag":"images/flag images/slovenia.png","text":"Ruled by the Habsburgs for centuries, then part of Yugoslavia, Slovenia has been independent since 1991.","page":"flag pages/slovenia.html"},"spain":{"name":"Spain","flag":"images/flag images/spain.svg","text":"Formed from rival medieval kingdoms, Spain grew into a vast global empire after 1492.","page":"flag pages/spain.html"},"sweden":{"name":"Sweden","flag":"images/flag images/sweden.svg","text":"A Baltic power that dominated northern Europe during the 17th century.","page":"flag pages/sweden.html"},"switzerland":{"name":"Switzerland","flag":"images/flag images/switzerland.svg","text":"Grew from a pact between Alpine communities in 1291 into a neutral confederation of cantons.","page":"flag pages/switzerland.html"},"ukraine":{"name":"Ukraine","flag":"images/flag images/ukraine.jpeg","text":"The heartland of medieval Kyivan Rus', later divided among Poland, Lithuania, Russia and Austria-Hungary.","page":"flag pages/ukraine.html"},"vatican-city":{"name":"Vatican City","flag":"images/flag images/vatican-city.svg","text":"The world's smallest state, seat of the papacy and last remnant of the old Papal States.","page":"flag pages/vatican-city.html"}};
 
+        // grabs the map svg and the popup box
         var map = document.querySelector(".europe-map");
         var popup = document.getElementById("map-popup");
 
+        // hides the popup
         function closePopup() { popup.hidden = true; }
 
         // ---- zoom (mouse wheel / buttons) and pan (click and drag) ----
+        // width and height of the whole map, used as the zoomed out view
         var BW = 1401.34, BH = 1198.34;
+        // the part of the map currently on screen
         var view = { x: 0, y: 0, w: BW, h: BH };
+        // tracks whether the mouse moved far enough to count as a drag
         var moved = false;
 
+        // pans and zooms the map by changing which part of the svg is shown
         function applyView() {
             map.setAttribute("viewBox", view.x + " " + view.y + " " + view.w + " " + view.h);
         }
@@ -1603,9 +1614,11 @@
             applyView();
         }
 
+        // zooms in or out while keeping the spot under the cursor in place
         function zoomAt(factor, cx, cy) {
             var r = map.getBoundingClientRect();
             var fx = (cx - r.left) / r.width, fy = (cy - r.top) / r.height;
+            // stops the map zooming in or out past its limits
             var newW = Math.min(view.w * 3, Math.max(BW / 12, view.w * factor));
             var k = newW / view.w;
             view.x += (view.w - view.w * k) * fx;
@@ -1616,11 +1629,13 @@
             closePopup();
         }
 
+        // scrolling up zooms in, scrolling down zooms out
         map.addEventListener("wheel", function (e) {
             e.preventDefault();
             zoomAt(e.deltaY < 0 ? 0.85 : 1 / 0.85, e.clientX, e.clientY);
         }, { passive: false });
 
+        // remembers where the mouse went down and where the map was at that moment
         var drag = null;
         map.addEventListener("pointerdown", function (e) {
             drag = { x: e.clientX, y: e.clientY, vx: view.x, vy: view.y };
@@ -1629,6 +1644,7 @@
         window.addEventListener("pointermove", function (e) {
             if (!drag) return;
             var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+            // ignores tiny movements so a normal click is not treated as a drag
             if (!moved && Math.abs(dx) + Math.abs(dy) < 5) return;
             if (!moved) { moved = true; map.classList.add("dragging"); closePopup(); }
             var unit = view.w / map.getBoundingClientRect().width;   // map units per screen pixel
@@ -1636,11 +1652,13 @@
             view.y = drag.vy - dy * unit;
             applyView();
         });
+        // stops dragging when the mouse is let go
         window.addEventListener("pointerup", function () {
             drag = null;
             map.classList.remove("dragging");
         });
 
+        // zooms around the middle of the map for the + and - buttons
         function centreZoom(f) {
             var r = map.getBoundingClientRect();
             zoomAt(f, r.left + r.width / 2, r.top + r.height / 2);
@@ -1652,8 +1670,10 @@
 
         map.addEventListener("click", function (e) {
             if (moved) { moved = false; return; }   // that was a drag, not a click
+            // finds which country was clicked, or closes the popup if it was the sea
             var shape = e.target.closest(".map-country");
             if (!shape) { closePopup(); return; }
+            // fills the popup with that country's flag, name, text and link
             var c = info[shape.dataset.country];
             popup.querySelector(".map-popup-flag").style.backgroundImage = "url('" + c.flag + "')";
             popup.querySelector("h2").textContent = c.name;
@@ -1668,6 +1688,7 @@
             popup.style.top = y + "px";
         });
 
+        // escape key closes the popup
         document.addEventListener("keydown", function (e) { if (e.key === "Escape") closePopup(); });
         popup.querySelector(".map-popup-close").addEventListener("click", closePopup);
     </script>

@@ -3,6 +3,7 @@
 // Typing a From and/or To year hides every flag that was not in use at any point in that period.
 // Entries with no date at all are always shown.
 
+// grabs the year boxes, the message line and every flag entry on the page
 var fromBox = document.getElementById("year-from");
 var toBox = document.getElementById("year-to");
 var message = document.getElementById("year-message");
@@ -16,12 +17,15 @@ function readRanges(text) {
     }).filter(Boolean);
 }
 
+// shows or hides each flag entry depending on the years typed in
 function filterFlags() {
     var from = fromBox.value === "" ? -Infinity : parseInt(fromBox.value, 10);
     var to = toBox.value === "" ? Infinity : parseInt(toBox.value, 10);
     if (from > to) { var swap = from; from = to; to = swap; }   // allow the boxes to be filled in either order
 
+    // true when at least one of the year boxes has something in it
     var filtering = (fromBox.value !== "" || toBox.value !== "");
+    // counts how many entries are left on screen
     var shown = 0;
 
     entries.forEach(function (entry) {
@@ -35,6 +39,7 @@ function filterFlags() {
         if (visible) { shown++; }
     });
 
+    // tells the person how many flags match, or that none do
     if (!filtering) {
         message.textContent = "";
     } else if (shown === 0) {
@@ -44,8 +49,10 @@ function filterFlags() {
     }
 }
 
+// filters again every time a year is typed
 fromBox.addEventListener("input", filterFlags);
 toBox.addEventListener("input", filterFlags);
+// empties both boxes and shows every flag again
 document.getElementById("year-clear").addEventListener("click", function () {
     fromBox.value = "";
     toBox.value = "";
