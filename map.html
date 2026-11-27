@@ -1588,8 +1588,24 @@
         // tracks whether the mouse moved far enough to count as a drag
         var moved = false;
 
+        // widest view allowed, which is the whole map on screen (set in fitView)
+        var maxW = BW;
+
+        // keeps the view over the map so it can't be dragged away into empty space
+        function limitView() {
+            var unit = view.w / map.clientWidth;                          // map units per screen pixel
+            var sideW = document.querySelector(".sidebar").offsetWidth;   // the sidebar covers the left edge
+            var slack = view.w * 0.1;                                     // small gap allowed past each edge
+            // the view's top-left corner has to stay between these limits
+            var xa = -(sideW * unit + slack), xb = BW - view.w + slack;
+            var ya = -slack, yb = BH - view.h + slack;
+            view.x = Math.min(Math.max(view.x, Math.min(xa, xb)), Math.max(xa, xb));
+            view.y = Math.min(Math.max(view.y, Math.min(ya, yb)), Math.max(ya, yb));
+        }
+
         // pans and zooms the map by changing which part of the svg is shown
         function applyView() {
+            limitView();
             map.setAttribute("viewBox", view.x + " " + view.y + " " + view.w + " " + view.h);
         }
 
@@ -1603,6 +1619,7 @@
             view.h = H / scale;
             view.x = -left / scale;
             view.y = (BH - view.h) / 2;
+            maxW = view.w;   // zooming out stops once the whole map is in view
 
             // start zoomed in on central Europe (change START_ZOOM to taste; 1 = whole map)
             var START_ZOOM = 1.8, focusX = 540, focusY = 740;
@@ -1619,7 +1636,7 @@
             var r = map.getBoundingClientRect();
             var fx = (cx - r.left) / r.width, fy = (cy - r.top) / r.height;
             // stops the map zooming in or out past its limits
-            var newW = Math.min(view.w * 3, Math.max(BW / 12, view.w * factor));
+            var newW = Math.min(maxW, Math.max(BW / 12, view.w * factor));
             var k = newW / view.w;
             view.x += (view.w - view.w * k) * fx;
             view.y += (view.h - view.h * k) * fy;
