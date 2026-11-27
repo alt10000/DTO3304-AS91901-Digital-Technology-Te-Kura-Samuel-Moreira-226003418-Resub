@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Switzerland | Historia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" rel="stylesheet" type="text/css">
+    <!-- loads Bree Serif font -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="../images/favicon.png" rel="shortcut icon">
+</head>
+
+<body class="country-page">
+
+    <!-- header: one big title row across the full width -->
+    <header class="country-header">
+        <a href="../map.html" class="back-link">&larr; Back to map</a>
+        <h1>Switzerland</h1>
+    </header>
+
+    <!-- three columns: small | large | small (1 : 3 : 1) -->
+    <div class="country-columns">
+
+        <!-- left column: flags moving down -->
+        <aside class="side-column" aria-hidden="true">
+            <div class="side-track">
+                    <!-- Set A -->
+                    <img src="../images/flag images/switzerland1.png" alt="">
+                    <img src="../images/flag images/switzerland2.webp" alt="">
+                    <img src="../images/flag images/switzerland3.png" alt="">
+                    <img src="../images/flag images/switzerland4.webp" alt="">
+                    <img src="../images/flag images/switzerland1.png" alt="">
+                    <img src="../images/flag images/switzerland2.webp" alt="">
+                    <img src="../images/flag images/switzerland3.png" alt="">
+                    <img src="../images/flag images/switzerland4.webp" alt="">
+                    <img src="../images/flag images/switzerland1.png" alt="">
+                    <img src="../images/flag images/switzerland2.webp" alt="">
+                    <!-- Set B: exact duplicate of Set A -->
+                    <img src="../images/flag images/switzerland1.png" alt="">
+                    <img src="../images/flag images/switzerland2.webp" alt="">
+                    <img src="../images/flag images/switzerland3.png" alt="">
+                    <img src="../images/flag images/switzerland4.webp" alt="">
+                    <img src="../images/flag images/switzerland1.png" alt="">
+                    <img src="../images/flag images/switzerland2.webp" alt="">
+                    <img src="../images/flag images/switzerland3.png" alt="">
+                    <img src="../images/flag images/switzerland4.webp" alt="">
+                    <img src="../images/flag images/switzerland1.png" alt="">
+                    <img src="../images/flag images/switzerland2.webp" alt="">
+            </div>
+        </aside>
+
+        <!-- centre column: flag image and information text -->
+        <main class="country-main">
+
+            <div class="country-flag-box">
+                <img src="../images/flag images/switzerland4.webp" alt="National flag of Switzerland (1848–present)">
+            </div>
+
+            <section class="country-info">
+                <h2>Historical Flags</h2>
+                <p class="flag-intro">The history of the Swiss flag begins with military identification symbols used by the cantons of the Old Swiss Confederacy. The white cross on red gradually became a shared emblem, eventually developing into the distinctive square national flag adopted with the establishment of the modern Swiss federal state in 1848.</p>
+                <div class="year-filter">
+                    <h3>Search by date</h3>
+                    <label>From <input type="number" id="year-from" placeholder="e.g. 1500"></label>
+                    <label>To <input type="number" id="year-to" placeholder="e.g. 1800"></label>
+                    <button type="button" id="year-clear">Clear</button>
+                    <p id="year-message" aria-live="polite"></p>
+                </div>
+
+                <article class="flag-entry" data-years="1422-1475">
+                    <div class="flag-entry-image">
+                        <img src="../images/flag images/switzerland1.png" alt="First flag of the Old Swiss Confederacy (c.1422–1475)">
+                    </div>
+                    <h3 class="flag-entry-title">First flag of the Old Swiss Confederacy (c.1422–1475)</h3>
+                    <p>Commonly depicted as a red triangular banner with an elongated white cross positioned slightly toward the hoist. It is associated with the Confederate troops at the Battle of Arbedo in 1422, although the precise design and its use as a unified Confederate flag are not entirely certain. The white cross had already appeared as a military identifying symbol at the Battle of Laupen in 1339.</p>
+                </article>
+
+                <article class="flag-entry" data-years="1475-1798">
+                    <div class="flag-entry-image">
+                        <img src="../images/flag images/switzerland2.webp" alt="Second flag of the Old Swiss Confederacy (c.1475–1798)">
+                    </div>
+                    <h3 class="flag-entry-title">Second flag of the Old Swiss Confederacy (c.1475–1798)</h3>
+                    <p>A square red banner bearing a white cross in its centre. The cross became an increasingly recognisable emblem of the Swiss Confederates and appeared on soldiers' clothing, equipment and military banners. It was a shared symbol of the Confederacy rather than a national flag in the modern sense.</p>
+                </article>
+
+                <article class="flag-entry" data-years="1814-1848">
+                    <div class="flag-entry-image">
+                        <img src="../images/flag images/switzerland3.png" alt="Flag of the Restored Swiss Confederacy (1814–1848)">
+                    </div>
+                    <h3 class="flag-entry-title">Flag of the Restored Swiss Confederacy (1814–1848)</h3>
+                    <p>A red square flag with a white cross, featuring a sword surrounded by laurel branches in the centre and the German inscription Für Vaterland und Ehre ("For Fatherland and Honour") across the horizontal arm. Associated with the restoration of the Confederacy after the Napoleonic period, it reflected the revival of the traditional Swiss cross as a common military and national emblem. The restored Confederacy officially reintroduced the Swiss Cross as its national emblem in 1814.</p>
+                </article>
+
+                <article class="flag-entry" data-years="1848-9999">
+                    <div class="flag-entry-image">
+                        <img src="../images/flag images/switzerland4.webp" alt="National flag of Switzerland (1848–present)">
+                    </div>
+                    <h3 class="flag-entry-title">National flag of Switzerland (1848–present)</h3>
+                    <p>A square red flag with a white cross in the centre. The design was adopted with the Federal Constitution of 1848, which established the modern Swiss federal state. Its proportions were formally standardised in 1889, specifying a white cross with equal arms, each one-sixth longer than it is wide. The square shape reflects the flag's origins as a military banner.</p>
+                </article>
+
+                <div class="flag-notes">
+                    <h3 class="flag-notes-title">Historical note</h3>
+                    <p>The Swiss white cross originated as a military identification symbol, with its earliest recorded use associated with the Battle of Laupen in 1339. It gradually became a common emblem of the Confederacy. During the Helvetic Republic (1798–1803), Switzerland briefly used a green, red and yellow horizontal tricolour imposed under French influence. After its abolition, the traditional white cross on red returned and eventually became the flag of the modern federal state.</p>
+                    <h3 class="flag-notes-title">Historical clarification</h3>
+                    <ul class="flag-notes-list">
+                        <li>The first and second Old Swiss Confederacy flags are historical reconstructions associated with the development of the Confederate cross. The exact dates and forms should be treated as approximate.</li>
+                        <li>The white cross was already used by Swiss soldiers in 1339, but this does not mean that a standardised national flag existed at that time.</li>
+                        <li>The Restored Confederacy flag was a military and ceremonial design associated with the early 19th-century revival of the Swiss Cross.</li>
+                        <li>The modern Swiss flag was adopted in 1848, but its precise cross proportions were not legally standardised until 1889.</li>
+                        <li>Switzerland's flag is traditionally square. A rectangular version is used as the Swiss civil ensign at sea, authorised in 1941 and retained under maritime law.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- right column: flags moving down -->
+        <aside class="side-column" aria-hidden="true">
+            <div class="side-track side-track-right">
+                    <!-- Set A -->
+                    <img src="../images/flag images/switzerland3.png" alt="">
+                    <img src="../images/flag images/switzerland4.webp" alt="">
+                    <img src="../images/flag images/switzerland1.png" alt="">
+                    <img src="../images/flag images/switzerland2.webp" alt="">
+                    <img src="../images/flag images/switzerland3.png" alt="">
+                    <img src="../images/flag images/switzerland4.webp" alt="">
+                    <img src="../images/flag images/switzerland1.png" alt="">
+                    <img src="../images/flag images/switzerland2.webp" alt="">
+                    <img src="../images/flag images/switzerland3.png" alt="">
+                    <img src="../images/flag images/switzerland4.webp" alt="">
+                    <!-- Set B: exact duplicate of Set A -->
+                    <img src="../images/flag images/switzerland3.png" alt="">
+                    <img src="../images/flag images/switzerland4.webp" alt="">
+                    <img src="../images/flag images/switzerland1.png" alt="">
+                    <img src="../images/flag images/switzerland2.webp" alt="">
+                    <img src="../images/flag images/switzerland3.png" alt="">
+                    <img src="../images/flag images/switzerland4.webp" alt="">
+                    <img src="../images/flag images/switzerland1.png" alt="">
+                    <img src="../images/flag images/switzerland2.webp" alt="">
+                    <img src="../images/flag images/switzerland3.png" alt="">
+                    <img src="../images/flag images/switzerland4.webp" alt="">
+            </div>
+        </aside>
+
+    </div>
+
+    <script src="../javascript/yearFilter.js"></script>
+</body>
+
+</html>
