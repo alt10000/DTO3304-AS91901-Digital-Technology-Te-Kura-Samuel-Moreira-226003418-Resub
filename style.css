@@ -146,7 +146,7 @@ body {
     display: flex;
     width: max-content;
     height: 100%;
-    animation: scroll-left 40s linear infinite; /* reuses the keyframes from the landing page */
+    animation: scroll-left 54s linear infinite; /* reuses the keyframes from the landing page */
 }
 
 .header-track img {
@@ -204,9 +204,10 @@ body {
     width: 100%;
     box-sizing: border-box;
     padding: 8px 12px;
-    background: #0a84d6;
-    color: #fff;
+    background: #fff;
+    color: #000;
     border: none;
+    border-bottom: 2px solid #0a84d6;
     outline: none;
     text-align: center;
     font-family: "Bree Serif", serif;
@@ -214,12 +215,12 @@ body {
 }
 
 .sidebar-search::placeholder {
-    color: #fff;
+    color: #555;
     opacity: 1;
 }
 
 .sidebar-search:focus {
-    background: #0970b5;
+    background: #eef7ff;
 }
 
 .country-list {
@@ -279,6 +280,14 @@ body {
 
 /* ---------- Interactive map ---------- */
 /* map svg fills the map area and can be dragged around */
+/* keeps the map hidden for a moment while it loads, then fades it in */
+.europe-map { animation: map-reveal 1.4s ease-out; }
+
+@keyframes map-reveal {
+    0%, 70% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 .europe-map { position: absolute; inset: 0; width: 100%; height: 100%; }
 .europe-map { cursor: grab; touch-action: none; user-select: none; }
 .europe-map.dragging, .europe-map.dragging .map-country { cursor: grabbing; }
@@ -431,11 +440,11 @@ body.country-page {
 .side-track {
     display: flex;
     flex-direction: column;
-    animation: scroll-down 70s linear infinite;
+    animation: scroll-down 95s linear infinite;
 }
 
 .side-track-right {
-    animation-duration: 80s;     /* slightly different so the columns don't move in lockstep */
+    animation-duration: 108s;     /* slightly different so the columns don't move in lockstep */
 }
 
 .side-track img {
@@ -495,7 +504,7 @@ body.country-page {
 
 .country-info p {
     margin: 0 0 22px;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     line-height: 1.5;
 }
 
@@ -566,33 +575,6 @@ body.country-page {
     max-height: 260px;           /* tall flags are scaled down; the box shrinks with them */
 }
 
-/* shaded box for extra notes under a flag */
-.flag-notes {
-    margin: 10px 0 30px;
-    padding: 16px 20px 6px;
-    background: #fdf3e7;
-    border-left: 6px solid #000;
-    border-radius: 10px;
-}
-
-.flag-notes-title {
-    margin-top: 6px;
-}
-
-.flag-notes p {
-    font-size: 1rem;
-}
-
-.flag-notes-list {
-    margin: 0 0 18px;
-    padding-left: 22px;
-    line-height: 1.5;
-}
-
-.flag-notes-list li {
-    margin-bottom: 6px;
-}
-
 /* ---------- Information page ---------- */
 body.guide-page {
     overflow: auto;              /* overrides the landing page's overflow: hidden */
@@ -616,12 +598,12 @@ body.guide-page {
 }
 
 .guide-nav a {
-    padding: 6px 16px;
+    padding: 8px 20px;
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
     text-decoration: none;
     font-family: "Bree Serif", serif;
-    font-size: 1rem;
+    font-size: 1.15rem;
     border: 3px solid rgba(255, 255, 255, 0.85);
     border-radius: 14px;
     transition: transform 0.15s;
@@ -760,8 +742,8 @@ body.guide-page {
         transform: none;
     }
     .guide-nav a {
-        padding: 4px 10px;
-        font-size: 0.85rem;
+        padding: 5px 12px;
+        font-size: 0.95rem;
     }
     .guide-page .map-title {
         padding: 6px 18px;
